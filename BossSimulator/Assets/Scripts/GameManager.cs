@@ -7,8 +7,11 @@ public class GameManager : MonoBehaviour
 {
     public FirstPersonController fpc;
 
-    public float xSens;
-    public float ySens;
+    private float xSens;
+    private float ySens;
+
+    private float walkSpeed;
+    private float runSpeed;
 
     public bool isInteracting = false;
 
@@ -23,6 +26,10 @@ public class GameManager : MonoBehaviour
     {
         xSens = fpc.m_MouseLook.XSensitivity;
         ySens = fpc.m_MouseLook.YSensitivity;
+
+        walkSpeed = fpc.m_WalkSpeed;
+        runSpeed = fpc.m_RunSpeed;
+
     }
 
     void Update()
@@ -37,24 +44,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void DisableCameraMovement()
+    public void DisableCameraMovement()
     {
         fpc.m_MouseLook.XSensitivity = 0;
         fpc.m_MouseLook.YSensitivity = 0;
     }
 
-    void EnableCameraMovement()
+    public void EnableCameraMovement()
     {
-        
+        fpc.m_MouseLook.XSensitivity = xSens;
+        fpc.m_MouseLook.YSensitivity = ySens;
     }
 
-    void DisablePlayerMovement()
+    public void DisablePlayerMovement()
     {
-
+        fpc.m_WalkSpeed = 0;
+        fpc.m_RunSpeed = 0;
     }
 
-    void EnablePlayerMovement()
+    public void EnablePlayerMovement()
     {
-
+        fpc.m_WalkSpeed = walkSpeed;
+        fpc.m_RunSpeed = runSpeed;
     }
 }

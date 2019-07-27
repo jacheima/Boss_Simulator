@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        
+
         //Set the condition for opening the menu to true
         animator.SetBool("isOpen", true);
 
@@ -36,9 +36,9 @@ public class DialogueManager : MonoBehaviour
         sentences.Clear();
 
         //if there is a textFile
-        if (dialogue.textFile)
+        if (dialogue.textDialogueFile)
         {
-            dialogue.sentences = dialogue.textFile.text.Split("\n"[0]);
+            dialogue.sentences = dialogue.textDialogueFile.text.Split("\n"[0]);
         }
 
         //for each sentence in the dialogue section
@@ -83,6 +83,6 @@ public class DialogueManager : MonoBehaviour
         //close the interaction menu by setting its parameter to false
         animator.SetBool("isOpen", false);
 
-        
+
     }
 }

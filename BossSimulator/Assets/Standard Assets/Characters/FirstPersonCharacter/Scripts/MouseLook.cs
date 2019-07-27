@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Assertions.Comparers;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets.Characters.FirstPerson
@@ -20,6 +21,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private Quaternion m_CharacterTargetRot;
         private Quaternion m_CameraTargetRot;
         private bool m_cursorIsLocked = true;
+
+        private float tempx = XSensitivity;
+        private float tempy = YSensitivity;
 
         public void Init(Transform character, Transform camera)
         {
@@ -111,5 +115,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
             return q;
         }
 
+        public void DisableMouseLook()
+        {
+            tempx = XSensitivity;
+            tempy = YSensitivity;
+
+            XSensitivity = 0f;
+            YSensitivity = 0f;
+        }
+
+        public void EnableMouseLook()
+        {
+            XSensitivity = tempx;
+            YSensitivity = tempy;
+        }
+
     }
+
+  
 }
