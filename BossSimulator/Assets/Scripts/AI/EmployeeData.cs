@@ -12,13 +12,16 @@ public class EmployeeData : MonoBehaviour
     public AIController AIController;
 
     [Header("Variables")]
-    public string name;
+    public string employeeName;
+    public bool usedRestrom;
+    public bool onBreak;
 
 
     [Header("Needs")]
     public float happiness;
     public float productivity;
     public float social;
+    public float bladder;
 
     [Header("Traits")]
     public string[] traits;
@@ -29,5 +32,22 @@ public class EmployeeData : MonoBehaviour
         tf = GetComponent<Transform>();
         employee = this.gameObject;
         AIController = GetComponent<EmployeeController>();
+
+        social = Random.Range(35, 100);
+        bladder = Random.Range(35, 100);
+    }
+
+    void Update()
+    {
+        bladder -= 0.8f * Time.deltaTime;
+
+        if (onBreak == true)
+        {
+            social += +3f * Time.deltaTime;
+        }
+        else
+        {
+            social -= 0.8f * Time.deltaTime;
+        }
     }
 }

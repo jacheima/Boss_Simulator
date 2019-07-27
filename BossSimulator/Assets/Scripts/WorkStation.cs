@@ -6,14 +6,21 @@ public class WorkStation : MonoBehaviour
 {
     [Header("Components")]
     public EmployeeData eData;
+    public string emplyoee;
+    public Transform tf;
+
+    void Awake()
+    {
+        tf = GetComponent<Transform>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Employee")
+        if (other.tag == "Employee" && other.transform.GetComponent<EmployeeData>().employeeName == emplyoee )
         {
-            Debug.Log("Carol has entered her workstation");
-            eData.tf.position = new Vector3(-1.592f, 1.549f, 4.231f);
-            eData.tf.eulerAngles = new Vector3(-20.935f, -142.818f, 0);
+            Debug.Log( emplyoee + " has entered her workstation");
+            eData.tf.position = tf.position;
+            eData.tf.rotation = tf.rotation;
         }
     }
 }
