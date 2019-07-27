@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.XR.WSA.Input;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
 using Random = UnityEngine.Random;
@@ -42,6 +43,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+       
+
+
         // Use this for initialization
         private void Start()
         {
@@ -81,6 +85,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+            
         }
 
 
