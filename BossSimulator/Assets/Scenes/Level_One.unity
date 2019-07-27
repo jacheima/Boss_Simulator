@@ -1644,8 +1644,7 @@ GameObject:
   - component: {fileID: 178535637}
   - component: {fileID: 178535636}
   - component: {fileID: 178535640}
-  - component: {fileID: 178535641}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1733,44 +1732,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 178535635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1158d86ff824b524abd4c4d29c95da0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 411171534}
-  dialogue:
-    name: Carol
-    sentences: []
-  dialogueManager: {fileID: 0}
-  sphereRadius: 5
-  talkDistance: 1
-  targetMask:
-    m_Bits: 0
---- !u!114 &178535641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178535635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63799c9891e3f4c43b475be24326368b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueManager: {fileID: 203889357}
-  dialogue:
-    name: 
+  dialouge:
+    name: Carol
+    textFile: {fileID: 4900000, guid: e75d192fb0988ca40abbcc26c61d1fe4, type: 3}
     sentences: []
+    lineNumber: 0
+  dialogueManager: {fileID: 203889357}
+  radius: 2
 --- !u!1 &193202338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,6 +1956,7 @@ MonoBehaviour:
   nameText: {fileID: 1412198165}
   dialogueText: {fileID: 1996158003}
   animator: {fileID: 908041116}
+  gm: {fileID: 1397306998}
 --- !u!4 &203889358
 Transform:
   m_ObjectHideFlags: 0
@@ -1993,7 +1965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203889356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.046783, y: 1.2614517, z: -28.195824}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9421,7 +9393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 11, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &908041116
@@ -15534,6 +15506,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1394278931}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1397306997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1397306999}
+  - component: {fileID: 1397306998}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1397306998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397306997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1434182ff850e2439c4d28b0a7fc246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpc: {fileID: 1519947334}
+  xSens: 0
+  ySens: 0
+  isInteracting: 0
+--- !u!4 &1397306999
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397306997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.96057, y: 8.348952, z: -2.9712238}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1400337222
 GameObject:
   m_ObjectHideFlags: 0
@@ -16916,6 +16935,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1971774592}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1519947334 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11400000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1971774592}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519947330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1519947336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16925,15 +16956,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1519947330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62b856858940bf24ea8638f0314bf2b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d9c1fef828ae964091d7d60d58ccf38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 411171534}
-  talkDistance: 1
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 512
-  interactable: {fileID: 178535641}
+  cam: {fileID: 411171534}
 --- !u!1 &1520627842
 GameObject:
   m_ObjectHideFlags: 0
@@ -21953,6 +21979,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: field of view
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.474417
@@ -21996,14 +22030,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: m_projectionMatrixMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: field of view
-      value: 47
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}

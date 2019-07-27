@@ -4,21 +4,25 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    public Dialogue dialouge;
     public DialogueManager dialogueManager;
 
-    public Dialogue dialogue;
+    public float radius = 2f;
 
-    // Start is called before the first frame update
     public void StartInteraction()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            dialogueManager.StartDialogue(dialogue);
-        }
+        //Start the dialogue by going to the StartDialogue function in the dialogue manager
+        dialogueManager.StartDialogue(dialouge);
     }
 
-    void EndInteraction()
+    void OnDrawGizmosSelected()
     {
+        //Show the distance in the editor
 
+        //Set the color to yellow
+        Gizmos.color = Color.yellow;
+
+        //Draw the sphere so the designers can see the area the player needs to be in to interact with the character
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
