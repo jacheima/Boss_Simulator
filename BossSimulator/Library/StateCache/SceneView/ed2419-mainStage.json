@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":27.960569381713868,"y":8.348952293395996,"z":-2.971223831176758},"rotation":{"x":-0.2258385568857193,"y":0.12728562951087953,"z":-0.0297775249928236,"w":-0.9653542041778565},"size":22.0,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":4.426338195800781,"y":6.439870834350586,"z":12.06334400177002},"rotation":{"x":-0.003456554841250181,"y":0.9900574088096619,"z":-0.13843277096748353,"w":-0.024715790525078775},"size":11.920763969421387,"orthographic":false}
+>>>>>>> NPC
