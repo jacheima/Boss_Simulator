@@ -694,50 +694,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311558925}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &353145886
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 353145888}
-  - component: {fileID: 353145887}
-  m_Layer: 0
-  m_Name: NeedsManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &353145887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353145886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71d1f06d8174978479062ff917069898, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  employees: []
---- !u!4 &353145888
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353145886}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.652364, y: 8.151706, z: 16.123417}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &388939269
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +948,9 @@ GameObject:
   - component: {fileID: 497771211}
   - component: {fileID: 497771210}
   - component: {fileID: 497771209}
+  - component: {fileID: 497771218}
+  - component: {fileID: 497771217}
+  - component: {fileID: 497771216}
   m_Layer: 0
   m_Name: Tina
   m_TagString: Employee
@@ -1050,7 +1009,7 @@ MonoBehaviour:
   tf: {fileID: 0}
   AIController: {fileID: 0}
   employeeName: Tina
-  usedRestrom: 0
+  usingRestroom: 0
   onBreak: 0
   workDone: 0
   isWorking: 0
@@ -1058,7 +1017,11 @@ MonoBehaviour:
   productivity: 0
   social: 0
   bladder: 0
+  stress: 0
   traits: []
+  bladderDecay: 0
+  hapinessDecay: 0
+  socialDeacy: 0
 --- !u!195 &497771211
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1156,6 +1119,64 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497771207}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &497771216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497771207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3745bfe996974714db1d49628edab86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eData: {fileID: 0}
+  employee: {fileID: 497771207}
+--- !u!114 &497771217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497771207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d1f06d8174978479062ff917069898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eData: {fileID: 0}
+  employee: {fileID: 497771207}
+--- !u!114 &497771218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497771207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6a3d1b13eafa54f9eb5517b8131b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 214e055f0b8bfee4ba63e60b33627f4a, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 497771216}
+        m_MethodName: UpdateNeeds
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: cd56a54de139ccd43b06228c2e879071,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: ItemData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &520761740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1453,6 +1474,9 @@ GameObject:
   - component: {fileID: 686855839}
   - component: {fileID: 686855838}
   - component: {fileID: 686855837}
+  - component: {fileID: 686855847}
+  - component: {fileID: 686855846}
+  - component: {fileID: 686855845}
   m_Layer: 0
   m_Name: Samatha
   m_TagString: Employee
@@ -1496,15 +1520,19 @@ MonoBehaviour:
   tf: {fileID: 0}
   AIController: {fileID: 0}
   employeeName: Samatha
-  usedRestrom: 0
+  usingRestroom: 0
   onBreak: 0
   workDone: 0
   isWorking: 0
-  happiness: 0
+  happiness: 100
   productivity: 0
   social: 0
   bladder: 0
+  stress: 0
   traits: []
+  bladderDecay: 0.3
+  hapinessDecay: 0.1
+  socialDeacy: 0.5
 --- !u!195 &686855839
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1617,6 +1645,64 @@ Transform:
   m_Father: {fileID: 872995871}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &686855845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686855836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d1f06d8174978479062ff917069898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eData: {fileID: 0}
+  employee: {fileID: 686855836}
+--- !u!114 &686855846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686855836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3745bfe996974714db1d49628edab86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eData: {fileID: 686855838}
+  employee: {fileID: 686855836}
+--- !u!114 &686855847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686855836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6a3d1b13eafa54f9eb5517b8131b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 214e055f0b8bfee4ba63e60b33627f4a, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 686855846}
+        m_MethodName: UpdateNeeds
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: cd56a54de139ccd43b06228c2e879071,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: ItemData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &701936208
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,6 +2628,9 @@ GameObject:
   - component: {fileID: 1489032283}
   - component: {fileID: 1489032282}
   - component: {fileID: 1489032281}
+  - component: {fileID: 1489032290}
+  - component: {fileID: 1489032289}
+  - component: {fileID: 1489032288}
   m_Layer: 0
   m_Name: Jeff
   m_TagString: Employee
@@ -2600,7 +2689,7 @@ MonoBehaviour:
   tf: {fileID: 0}
   AIController: {fileID: 0}
   employeeName: Jeff
-  usedRestrom: 0
+  usingRestroom: 0
   onBreak: 0
   workDone: 0
   isWorking: 0
@@ -2608,7 +2697,11 @@ MonoBehaviour:
   productivity: 0
   social: 0
   bladder: 0
+  stress: 0
   traits: []
+  bladderDecay: 0
+  hapinessDecay: 0
+  socialDeacy: 0
 --- !u!195 &1489032283
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2706,6 +2799,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489032279}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1489032288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489032279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3745bfe996974714db1d49628edab86e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eData: {fileID: 0}
+  employee: {fileID: 1489032279}
+--- !u!114 &1489032289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489032279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d1f06d8174978479062ff917069898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eData: {fileID: 0}
+  employee: {fileID: 1489032279}
+--- !u!114 &1489032290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489032279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e6a3d1b13eafa54f9eb5517b8131b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 214e055f0b8bfee4ba63e60b33627f4a, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1489032288}
+        m_MethodName: UpdateNeeds
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: ItemData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1491233791
 GameObject:
   m_ObjectHideFlags: 0
@@ -3380,6 +3530,7 @@ GameObject:
   - component: {fileID: 1786642045}
   - component: {fileID: 1786642048}
   - component: {fileID: 1786642047}
+  - component: {fileID: 1786642049}
   m_Layer: 0
   m_Name: Carol
   m_TagString: Employee
@@ -3500,7 +3651,7 @@ MonoBehaviour:
   tf: {fileID: 0}
   AIController: {fileID: 0}
   employeeName: Carol
-  usedRestrom: 0
+  usingRestroom: 0
   onBreak: 0
   workDone: 0
   isWorking: 0
@@ -3508,7 +3659,11 @@ MonoBehaviour:
   productivity: 0
   social: 0
   bladder: 0
+  stress: 0
   traits: []
+  bladderDecay: 0
+  hapinessDecay: 0
+  socialDeacy: 0
 --- !u!114 &1786642045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3556,7 +3711,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3745bfe996974714db1d49628edab86e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  employeeData: {fileID: 0}
+  eData: {fileID: 1786642044}
+  employee: {fileID: 1786642038}
 --- !u!114 &1786642048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3587,6 +3743,20 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1786642049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786642038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d1f06d8174978479062ff917069898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eData: {fileID: 0}
+  employee: {fileID: 1786642038}
 --- !u!1 &1797468455
 GameObject:
   m_ObjectHideFlags: 0

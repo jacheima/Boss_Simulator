@@ -13,20 +13,27 @@ public class EmployeeData : MonoBehaviour
 
     [Header("Variables")]
     public string employeeName;
-    public bool usedRestrom;
+    public bool usingRestroom;
     public bool onBreak;
     public float workDone;
     public bool isWorking;
 
 
     [Header("Needs")]
-    public float happiness;
+    public float happiness = 100;
     public float productivity;
     public float social;
     public float bladder;
+    public float stress;
 
     [Header("Traits")]
     public string[] traits;
+
+    [Header("Deays")]
+    public float bladderDecay = .3f;
+    public float hapinessDecay = .1f;
+    public float socialDeacy = .5f;
+    
 
     void Awake()
     {
@@ -41,18 +48,6 @@ public class EmployeeData : MonoBehaviour
 
     void Update()
     {
-        bladder -= 0.8f * Time.deltaTime;
-        productivity = happiness + social + bladder;
-
-        if (onBreak == true)
-        {
-            social += +3f * Time.deltaTime;
-        }
-        else
-        {
-            social -= 0.8f * Time.deltaTime;
-        }
-
         if (isWorking == true)
         {
             workDone += (productivity / 150) * Time.deltaTime;

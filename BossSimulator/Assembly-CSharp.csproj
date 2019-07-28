@@ -60,7 +60,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Needs.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -91,6 +90,13 @@
     <Compile Include="Assets\Scripts\StopMovement.cs" />
     <Compile Include="Assets\Scripts\UpdateNPC.cs" />
     <Compile Include="Assets\Scripts\WorkStation.cs" />
+    <None Include="Assets\Resources\Dialogue\Jeffery.txt" />
+    <None Include="Assets\Resources\Dialogue\Samantha.txt" />
+    <None Include="Assets\Resources\Dialogue\Lauren.txt" />
+    <None Include="Assets\Resources\Dialogue\Tina.txt" />
+    <None Include="Assets\Resources\Dialogue\Adam.txt" />
+    <None Include="Assets\Resources\Dialogue\Brett.txt" />
+    <None Include="Assets\Resources\Dialogue\Steve.txt" />
     <None Include="Assets\Resources\Dialogue\Carol.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.TextMeshPro.Editor">

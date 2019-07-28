@@ -68,16 +68,16 @@ public class AIController : MonoBehaviour
     {
         eData.nav.SetDestination(restRoom.position);
 
-        if (!eData.nav.pathPending && eData.nav.remainingDistance <= 1f && eData.usedRestrom == false)
+        if (!eData.nav.pathPending && eData.nav.remainingDistance <= 1f && eData.usingRestroom == false)
         {
             stateStartTime = Time.time;
-            eData.usedRestrom = true;
+            eData.usingRestroom = true;
         }
 
-        if (Time.time >= stateStartTime + 15f && eData.usedRestrom == true)
+        if (Time.time >= stateStartTime + 15f && eData.usingRestroom == true)
         {
             eData.bladder = 100;
-            eData.usedRestrom = false;
+            eData.usingRestroom = false;
         }
     }
 
