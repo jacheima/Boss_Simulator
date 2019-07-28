@@ -68,6 +68,9 @@
     <Compile Include="Assets\Scripts\Camera\Input\KeyboardInputManager.cs" />
     <Compile Include="Assets\Scripts\Camera\Zoom\IZoomStrategy.cs" />
     <Compile Include="Assets\Scripts\Camera\Zoom\OrthographicZoomStrategy.cs" />
+    <Compile Include="Assets\Scripts\Items\Item.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemEffect.cs" />
+    <Compile Include="Assets\Scripts\Management\BudgetManager.cs" />
     <Compile Include="Assets\Scripts\WorkStation.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/wilmccla/Desktop/Boss Simulator/Boss_Simulator/BossSimulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
