@@ -9,7 +9,7 @@ public class Item : MonoBehaviour
     private GameEvent OnItemUsed;
 
     //Call the event raiser if the NPC enter the trigger
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         
         if (other.gameObject.tag == "Employee")
