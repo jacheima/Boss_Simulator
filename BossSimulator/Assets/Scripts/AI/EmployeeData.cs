@@ -15,6 +15,8 @@ public class EmployeeData : MonoBehaviour
     public string employeeName;
     public bool usedRestrom;
     public bool onBreak;
+    public float workDone;
+    public bool isWorking;
 
 
     [Header("Needs")]
@@ -40,6 +42,7 @@ public class EmployeeData : MonoBehaviour
     void Update()
     {
         bladder -= 0.8f * Time.deltaTime;
+        productivity = happiness + social + bladder;
 
         if (onBreak == true)
         {
@@ -48,6 +51,11 @@ public class EmployeeData : MonoBehaviour
         else
         {
             social -= 0.8f * Time.deltaTime;
+        }
+
+        if (isWorking == true)
+        {
+            workDone += (productivity / 150) * Time.deltaTime;
         }
     }
 }
