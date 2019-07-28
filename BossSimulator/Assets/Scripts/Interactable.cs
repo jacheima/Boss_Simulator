@@ -12,7 +12,7 @@ public class Interactable : MonoBehaviour
     public void StartInteraction()
     {
         //Start the dialogue by going to the StartDialogue function in the dialogue manager
-        dialogueManager.StartDialogue(dialouge);
+       // dialogueManager.StartDialogue(dialouge);
     }
 
     void OnDrawGizmosSelected()

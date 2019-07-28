@@ -1,9 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 498e1d885dcf89b43ba3396ada0c7e7e
 folderAsset: yes
 timeCreated: 1430834358
 licenseType: Store
 DefaultImporter:
+=======
+guid: e0f3afd90ba810c4790f1dc9af5920f7
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+>>>>>>> NPC
   userData: 
   assetBundleName: 
   assetBundleVariant: 
