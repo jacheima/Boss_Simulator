@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c62a2689547a6cc4ebeaf252bd844627
+=======
+guid: bc096c40ee1f0ba419b62d0ef3a2ba3e
+>>>>>>> Interactions
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

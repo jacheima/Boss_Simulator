@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
+using System.IO;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
+using UnityEngine.VR;
 
 [System.Serializable]
 
 public class Dialogue
 {
-    //holds the name of the person the player is talking to
     public string name;
 
-    //holds all of the dialogue for the interaction
-    public TextAsset textFile;
+    public TextAsset textDialogueFile;
+    public TextAsset textOptionsFile;
 
-    public String[] sentences;
-
-    public int lineNumber;
+    public string[] sentences;
 
 }
+
+
 

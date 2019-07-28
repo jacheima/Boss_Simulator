@@ -21,6 +21,7 @@ MonoBehaviour:
     height: 1348
   m_ShowMode: 4
   m_Title: 
+<<<<<<< HEAD
   m_RootView: {fileID: 8}
   m_MinSize: {x: 950, y: 300}
 =======
@@ -33,59 +34,12 @@ MonoBehaviour:
   m_RootView: {fileID: 6}
   m_MinSize: {x: 950, y: 548}
 >>>>>>> NPC
+=======
+  m_RootView: {fileID: 6}
+  m_MinSize: {x: 950, y: 548}
+>>>>>>> Interactions
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 599
-    width: 1147
-    height: 299
-  m_MinSize: {x: 104, y: 124}
-  m_MaxSize: {x: 4004, y: 4024}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 13}
-  - {fileID: 2}
-  m_Position:
-    serializedVersion: 2
-    x: 202
-    y: 0
-    width: 1147
-    height: 898
-  m_MinSize: {x: 204, y: 348}
-  m_MaxSize: {x: 4004, y: 8048}
-  vertical: 1
-  controlID: 104
---- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,8 +52,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 11}
-  - {fileID: 5}
+  - {fileID: 9}
+  - {fileID: 3}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -107,9 +61,10 @@ MonoBehaviour:
 <<<<<<< HEAD
     width: 1718
     height: 1298
-  m_MinSize: {x: 681, y: 622}
-  m_MaxSize: {x: 14002, y: 18072}
+  m_MinSize: {x: 679, y: 498}
+  m_MaxSize: {x: 14002, y: 14048}
   vertical: 0
+<<<<<<< HEAD
   controlID: 89
 --- !u!114 &5
 =======
@@ -121,6 +76,10 @@ MonoBehaviour:
   controlID: 51
 --- !u!114 &3
 >>>>>>> NPC
+=======
+  controlID: 85
+--- !u!114 &3
+>>>>>>> Interactions
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,17 +95,22 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1349
+=======
+    x: 1222
+>>>>>>> Interactions
     y: 0
-    width: 369
+    width: 496
     height: 1298
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 18}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
+<<<<<<< HEAD
 --- !u!114 &6
 =======
     x: 2702
@@ -163,6 +127,9 @@ MonoBehaviour:
   m_LastSelected: 1
 --- !u!114 &4
 >>>>>>> NPC
+=======
+--- !u!114 &4
+>>>>>>> Interactions
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -180,12 +147,17 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 202
+=======
+    width: 200
+>>>>>>> Interactions
     height: 898
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
   m_Panes:
+<<<<<<< HEAD
   - {fileID: 19}
 =======
     width: 325
@@ -196,9 +168,12 @@ MonoBehaviour:
   m_Panes:
   - {fileID: 16}
 >>>>>>> NPC
+=======
+  - {fileID: 17}
+>>>>>>> Interactions
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &7
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,12 +191,13 @@ MonoBehaviour:
     x: 0
 <<<<<<< HEAD
     y: 898
-    width: 1349
+    width: 1222
     height: 400
   m_MinSize: {x: 232, y: 274}
   m_MaxSize: {x: 10002, y: 10024}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 15}
   m_Panes:
+<<<<<<< HEAD
   - {fileID: 17}
   - {fileID: 22}
 =======
@@ -235,9 +211,13 @@ MonoBehaviour:
   - {fileID: 14}
   - {fileID: 19}
 >>>>>>> NPC
+=======
+  - {fileID: 15}
+  - {fileID: 20}
+>>>>>>> Interactions
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &8
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -250,9 +230,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 9}
-  - {fileID: 4}
-  - {fileID: 10}
+  - {fileID: 7}
+  - {fileID: 2}
+  - {fileID: 8}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -266,7 +246,7 @@ MonoBehaviour:
 >>>>>>> NPC
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
---- !u!114 &9
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,7 +272,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &10
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -318,7 +298,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &11
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -331,18 +311,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 12}
-  - {fileID: 7}
+  - {fileID: 10}
+  - {fileID: 5}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1349
+=======
+    width: 1222
+>>>>>>> Interactions
     height: 1298
-  m_MinSize: {x: 406, y: 622}
-  m_MaxSize: {x: 10002, y: 18072}
+  m_MinSize: {x: 404, y: 498}
+  m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
+<<<<<<< HEAD
   controlID: 102
 --- !u!114 &12
 =======
@@ -354,6 +339,10 @@ MonoBehaviour:
   controlID: 52
 --- !u!114 &10
 >>>>>>> NPC
+=======
+  controlID: 115
+--- !u!114 &10
+>>>>>>> Interactions
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -366,18 +355,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 6}
-  - {fileID: 3}
+  - {fileID: 4}
+  - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1349
+=======
+    width: 1222
+>>>>>>> Interactions
     height: 898
-  m_MinSize: {x: 406, y: 348}
-  m_MaxSize: {x: 8006, y: 8048}
+  m_MinSize: {x: 404, y: 224}
+  m_MaxSize: {x: 8004, y: 4024}
   vertical: 0
+<<<<<<< HEAD
   controlID: 103
 --- !u!114 &13
 =======
@@ -389,6 +383,10 @@ MonoBehaviour:
   controlID: 53
 --- !u!114 &11
 >>>>>>> NPC
+=======
+  controlID: 116
+--- !u!114 &11
+>>>>>>> Interactions
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -404,14 +402,19 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
+=======
+    x: 200
+>>>>>>> Interactions
     y: 0
-    width: 1147
-    height: 599
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
-  m_ActualView: {fileID: 20}
+    width: 1022
+    height: 898
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 19}
   m_Panes:
+<<<<<<< HEAD
   - {fileID: 20}
   - {fileID: 21}
   - {fileID: 16}
@@ -429,9 +432,16 @@ MonoBehaviour:
   - {fileID: 18}
   - {fileID: 13}
 >>>>>>> NPC
+=======
+  - {fileID: 19}
+  - {fileID: 14}
+  - {fileID: 13}
+  - {fileID: 12}
+  - {fileID: 18}
+>>>>>>> Interactions
   m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &14
+  m_LastSelected: 3
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -440,27 +450,138 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 11500000, guid: 3424c03dd9e533544a90f81267b56ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
+  m_MinSize: {x: 720, y: 240}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Animation
-    m_Image: {fileID: -8166618308981325432, guid: 0000000000000000d000000000000000,
-      type: 0}
+    m_Text: Dialogue
+    m_Image: {fileID: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 203
-    y: 680
-    width: 1143
-    height: 279
+    x: 201
+    y: 81
+    width: 1018
+    height: 878
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_LockTracker:
-    m_IsLocked: 0
-  m_LastSelectedObjectID: 14036
---- !u!114 &15
+  actorFoldouts:
+    propertiesKeys: 
+    propertiesValues: 
+    fieldsKeys: 
+    fieldsValues: 
+  actorFilter: 
+  actorListSelectedIndex: -1
+  actorTexturesFoldout: 0
+  actorSpritesFoldout: 0
+  showNodeEditor: 1
+  currentConversationID: 1
+  globalSearchText: 
+  globalReplaceText: 
+  globalSearchSpecificConversation: 0
+  globalSearchConversationIndex: -1
+  databaseFoldouts:
+    database: 1
+    emphasisSettings: 0
+    emphasisSetting: 
+    globalReplace: 0
+    merge: 0
+    export: 0
+    localization: 0
+    editorSettings: 0
+  databaseToMerge: {fileID: 0}
+  conflictingIDRule: 0
+  mergeProperties: 1
+  mergeActors: 1
+  mergeItems: 1
+  mergeLocations: 1
+  mergeVariables: 1
+  mergeConversations: 1
+  exportFormat: 0
+  chatMapperExportPath: 
+  csvExportPath: 
+  voiceoverExportPath: 
+  languageTextExportPath: 
+  entrytagFormat: 0
+  encodingType: 4
+  isSearchBarOpen: 0
+  searchString: 
+  searchCaseSensitive: 0
+  currentEntryID: 7
+  itemFoldouts:
+    propertiesKeys: 
+    propertiesValues: 
+    fieldsKeys: 
+    fieldsValues: 
+  itemFilter: 
+  itemListSelectedIndex: -1
+  localizationLanguages:
+    languages: []
+    outputFolder: 
+  locationFoldouts:
+    propertiesKeys: 
+    propertiesValues: 
+    fieldsKeys: 
+    fieldsValues: 
+  locationFilter: 
+  locationListSelectedIndex: -1
+  toolbar:
+    current: 5
+  database: {fileID: 11400000, guid: 8287790580267bf45a014ef5cd950413, type: 2}
+  debug: 0
+  registerCompleteObjectUndo: 1
+  scrollPosition: {x: 0, y: 0}
+  templateFoldouts:
+    templates: 0
+    actors: 0
+    items: 0
+    quests: 0
+    locations: 0
+    conversations: 0
+    dialogueEntries: 0
+    variables: 0
+  useReorderableListForVariables: 1
+  variableFoldouts:
+    propertiesKeys: 
+    propertiesValues: 
+    fieldsKeys: 
+    fieldsValues: 
+  variableFilter: 
+  watches: []
+  autoUpdateWatches: 0
+  watchUpdateFrequency: 1
+  nextWatchUpdateTime: 16153.38895721569
+  watchableVariableNames:
+  - Actor
+  - ActorIndex
+  - Alert
+  - Conversant
+  - ConversantIndex
+  watchableQuestNames: []
+  luaCommand: 
+  showNodeIDs: 0
+  showTitlesInsteadOfText: 0
+  showAllActorNames: 0
+  showOtherActorNames: 1
+  showActorPortraits: 0
+  showParticipantNames: 1
+  showEndNodeMarkers: 1
+  showFullTextOnHover: 1
+  addNewNodesToRight: 0
+  autoArrangeOnCreate: 0
+  zoomLocked: 0
+  _zoom: 1
+  canvasRectWidthMultiplier: 1
+  canvasScrollView: {x: 100000, y: 100000}
+  canvasScrollPosition: {x: 0, y: 0}
+  conversationTitles:
+  - New Conversation 1
+  conversationIndex: -1
+  snapToGridAmount: 0
+  confirmDelete: 1
+  trimWhitespaceAroundPipes: 1
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -524,7 +645,7 @@ MonoBehaviour:
   m_CurrentEditor: 0
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &16
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -572,11 +693,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 2253
+=======
+    x: 203
+>>>>>>> Interactions
     y: 81
-    width: 813
+    width: 1143
     height: 878
   m_PersistentViewDataDictionary: {fileID: 0}
+<<<<<<< HEAD
 --- !u!114 &17
 =======
     x: 534
@@ -586,6 +712,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &14
 >>>>>>> NPC
+=======
+--- !u!114 &15
+>>>>>>> Interactions
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -609,7 +738,7 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 1
     y: 979
-    width: 1347
+    width: 1220
     height: 380
 =======
     x: 0
@@ -631,16 +760,21 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Resources/Dialogue
+=======
+    - Assets/Scripts
+>>>>>>> Interactions
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Dialogue
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\jacheima.KNOWN-UNIVERSE\Desktop\BossSimulator\Boss_Simulator\BossSimulator
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 5}
     m_SelectedIDs: 46690000
     m_LastClickedID: 26950
@@ -661,6 +795,12 @@ MonoBehaviour:
     m_LastClickedID: 11600
     m_ExpandedIDs: 00000000e2270000b82a00001a3000003230000000ca9a3b
 >>>>>>> NPC
+=======
+    scrollPos: {x: 0, y: 645}
+    m_SelectedIDs: d62d0000
+    m_LastClickedID: 11734
+    m_ExpandedIDs: 0000000094290000b62b0000282c00009c2d00001c32000058340000a25c0000365d00007a5d0000965d0000c65d0000d65d0000445e0000ac5e0000225f00003a5f000000ca9a3b
+>>>>>>> Interactions
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -689,10 +829,14 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000092290000b42b0000262c00009a2d00001632000050340000
 =======
     m_ExpandedIDs: 00000000e2270000b82a00001a30000032300000
 >>>>>>> NPC
+=======
+    m_ExpandedIDs: 0000000094290000b62b0000282c00009c2d00001c3200004433000058340000
+>>>>>>> Interactions
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -736,7 +880,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 7}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -748,10 +892,14 @@ MonoBehaviour:
     m_GridSize: 64
   m_DirectoriesAreaWidth: 288
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &18
 =======
 --- !u!114 &15
 >>>>>>> NPC
+=======
+--- !u!114 &16
+>>>>>>> Interactions
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -773,9 +921,13 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1350
+=======
+    x: 1223
+>>>>>>> Interactions
     y: 81
-    width: 367
+    width: 494
     height: 1278
 =======
     x: 2702
@@ -794,10 +946,14 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &19
 =======
 --- !u!114 &16
 >>>>>>> NPC
+=======
+--- !u!114 &17
+>>>>>>> Interactions
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -821,12 +977,13 @@ MonoBehaviour:
 <<<<<<< HEAD
     x: 1
     y: 81
-    width: 200
+    width: 198
     height: 878
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: d4fbffff
@@ -843,22 +1000,27 @@ MonoBehaviour:
       m_LastClickedID: 0
       m_ExpandedIDs: aefbffff98300000ae300000c63000003a31000068310000f2310000cc320000d0320000ec320000283300002c33000042330000fe330000
 >>>>>>> NPC
+=======
+      m_SelectedIDs: 20940100
+      m_LastClickedID: 103456
+      m_ExpandedIDs: ca53ffff6a5effffe88affff2aa4ffffd4fbffff2a3a0000223c0000a83f000020940100
+>>>>>>> Interactions
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Dialogue Manager
+        m_OriginalName: Dialogue Manager
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -29244
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 6}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -867,10 +1029,14 @@ MonoBehaviour:
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 351335057b4679e4eb31ce89d430f0dd
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &20
 =======
 --- !u!114 &17
 >>>>>>> NPC
+=======
+--- !u!114 &18
+>>>>>>> Interactions
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -892,6 +1058,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 203
     y: 81
     width: 1143
@@ -902,6 +1069,12 @@ MonoBehaviour:
     width: 2373
     height: 885
 >>>>>>> NPC
+=======
+    x: 201
+    y: 81
+    width: 1018
+    height: 878
+>>>>>>> Interactions
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: ed241926957fff9449c9aacf1d828985
   m_SceneLighting: 1
@@ -909,6 +1082,7 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Target: {x: 27.96057, y: 8.348952, z: -2.9712238}
     speed: 2
@@ -918,6 +1092,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 4.426338, y: 6.439871, z: 12.063344}
 >>>>>>> NPC
+=======
+    m_Target: {x: 27.988853, y: 12.47337, z: -3.9810781}
+    speed: 2
+    m_Value: {x: 27.988853, y: 12.47337, z: -3.9810781}
+>>>>>>> Interactions
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -946,12 +1125,17 @@ MonoBehaviour:
       m_Value: 0
   m_Rotation:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -0.22583856, y: 0.12728563, z: -0.029777525, w: -0.9653542}
+=======
+    m_Target: {x: -0.18564771, y: 0.43526685, z: -0.0922326, w: -0.8761112}
+>>>>>>> Interactions
     speed: 2
-    m_Value: {x: -0.22583856, y: 0.12728563, z: -0.029777525, w: -0.9653542}
+    m_Value: {x: -0.18564771, y: 0.43526685, z: -0.0922326, w: -0.8761112}
   m_Size:
-    m_Target: 22
+    m_Target: 8.573651
     speed: 2
+<<<<<<< HEAD
     m_Value: 22
 =======
     m_Target: {x: -0.0034565548, y: 0.9900574, z: -0.13843277, w: -0.02471579}
@@ -962,6 +1146,9 @@ MonoBehaviour:
     speed: 2
     m_Value: 11.920764
 >>>>>>> NPC
+=======
+    m_Value: 8.573651
+>>>>>>> Interactions
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -974,10 +1161,14 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &21
 =======
 --- !u!114 &18
 >>>>>>> NPC
+=======
+--- !u!114 &19
+>>>>>>> Interactions
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -999,6 +1190,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 203
     y: 81
     width: 1143
@@ -1009,6 +1201,12 @@ MonoBehaviour:
     width: 2373
     height: 885
 >>>>>>> NPC
+=======
+    x: 201
+    y: 81
+    width: 1018
+    height: 878
+>>>>>>> Interactions
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -1032,7 +1230,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1041,6 +1239,7 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
 <<<<<<< HEAD
       width: 1143
       height: 562
@@ -1052,12 +1251,19 @@ MonoBehaviour:
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 1186.5, y: 434}
 >>>>>>> NPC
+=======
+      width: 1018
+      height: 861
+    m_Scale: {x: 0.9941406, y: 0.9941406}
+    m_Translation: {x: 509, y: 430.5}
+>>>>>>> Interactions
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
 <<<<<<< HEAD
       x: -780.98224
       y: -384
@@ -1069,24 +1275,38 @@ MonoBehaviour:
       width: 2373
       height: 868
 >>>>>>> NPC
+=======
+      x: -512
+      y: -433.03732
+      width: 1024
+      height: 866.07465
+>>>>>>> Interactions
     m_MinimalGUI: 1
-  m_defaultScale: 0.7317708
+  m_defaultScale: 0.9941406
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1143, y: 579}
 =======
   m_LastWindowPixelSize: {x: 2373, y: 885}
 >>>>>>> NPC
+=======
+  m_LastWindowPixelSize: {x: 1018, y: 878}
+>>>>>>> Interactions
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
   m_XRRenderMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &22
 =======
 --- !u!114 &19
 >>>>>>> NPC
+=======
+--- !u!114 &20
+>>>>>>> Interactions
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
