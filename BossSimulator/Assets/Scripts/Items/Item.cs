@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Item")]
-public class Item : ScriptableObject
+public class Item : MonoBehaviour
 {
-    public string itemName;
-    public int radius;
-    public needs affectedNeed;
+    [SerializeField]
+    //The GameEvent to be raised when this item is used
+    private GameEvent OnItemUsed;
 
-    public enum needs
+    //Call the event raiser if the NPC enter the trigger
+    void OnTriggerEnter(Collider other)
     {
-        happiness, productivity, social
+        
+        if (other.gameObject.tag == "Employee")
+        {
+            
+            OnItemUsed.Raise();
+        }
     }
 }
