@@ -1,0 +1,86 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 5 5.0.5.1846 Release
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl prs009_metall__V
+Ka 0 0 0
+Kd 0.588235 0.588235 0.54902
+Ks 1 1 1
+illum 2
+Ns 1024
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl prs009_white__Vr
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.784314 0.784314 0.784314
+illum 2
+Ns 128
+map_Kd PRS00902.jpg
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl prs009_center__V
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.784314 0.784314 0.784314
+illum 2
+Ns 128
+map_Kd PRS00901.jpg
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Explorer_Default
+Ka 0.117647 0.117647 0.117647
+Kd 0.752941 0.752941 0.752941
+Ks 0.752941 0.752941 0.752941
+illum 2
+Ns 8
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl prs009_black__Vr
+Ka 0 0 0
+Kd 0 0 0
+Ks 0.784314 0.784314 0.784314
+illum 2
+Ns 8
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 

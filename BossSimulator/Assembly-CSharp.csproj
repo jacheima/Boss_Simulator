@@ -90,11 +90,13 @@
     <Compile Include="Assets\Scripts\StopMovement.cs" />
     <Compile Include="Assets\Scripts\UpdateNPC.cs" />
     <Compile Include="Assets\Scripts\WorkStation.cs" />
+    <None Include="Assets\Art\Models\ProjectorScreen\readme.txt" />
     <None Include="Assets\Resources\Dialogue\Jeffery.txt" />
     <None Include="Assets\Resources\Dialogue\Samantha.txt" />
     <None Include="Assets\Resources\Dialogue\Lauren.txt" />
     <None Include="Assets\Resources\Dialogue\Tina.txt" />
     <None Include="Assets\Resources\Dialogue\Adam.txt" />
+    <None Include="Assets\Art\Models\ConferenceTable\readme.txt" />
     <None Include="Assets\Resources\Dialogue\Brett.txt" />
     <None Include="Assets\Resources\Dialogue\Steve.txt" />
     <None Include="Assets\Resources\Dialogue\Carol.txt" />

@@ -1,0 +1,271 @@
+fileFormatVersion: 2
+guid: 426fd05141e80dc42a2adf4c4c3d2ecc
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Line1789545480
+    100002: Line1789545481
+    100004: Line1789545482
+    100006: Line1789545483
+    100008: Line1789545484
+    100010: Line1789545485
+    100012: Line1789545486
+    100014: Line1789545487
+    100016: Line1789545488
+    100018: Line1789545489
+    100020: Line1789545490
+    100022: Line1789545491
+    100024: Object5336
+    100026: Object5337
+    100028: Object5338
+    100030: Object5339
+    100032: Object5340
+    100034: Object5341
+    100036: Object5342
+    100038: Object5343
+    100040: Object5344
+    100042: Object5345
+    100044: Object5346
+    100046: Object5347
+    100048: Object5348
+    100050: Object5349
+    100052: Object5350
+    100054: Object5351
+    100056: Object5352
+    100058: Object5353
+    100060: Particle View 002
+    100062: Particle View 004
+    100064: Particle View 01
+    100066: Poster_frame_1_floral001
+    100068: Poster_frame_1_floral002
+    100070: Poster_frame_1_floral003
+    100072: Poster_frame_1_floral004
+    100074: Poster_frame_1_floral005
+    100076: Poster_frame_1_floral006
+    100078: //RootNode
+    100080: RH_posters_floral
+    400000: Line1789545480
+    400002: Line1789545481
+    400004: Line1789545482
+    400006: Line1789545483
+    400008: Line1789545484
+    400010: Line1789545485
+    400012: Line1789545486
+    400014: Line1789545487
+    400016: Line1789545488
+    400018: Line1789545489
+    400020: Line1789545490
+    400022: Line1789545491
+    400024: Object5336
+    400026: Object5337
+    400028: Object5338
+    400030: Object5339
+    400032: Object5340
+    400034: Object5341
+    400036: Object5342
+    400038: Object5343
+    400040: Object5344
+    400042: Object5345
+    400044: Object5346
+    400046: Object5347
+    400048: Object5348
+    400050: Object5349
+    400052: Object5350
+    400054: Object5351
+    400056: Object5352
+    400058: Object5353
+    400060: Particle View 002
+    400062: Particle View 004
+    400064: Particle View 01
+    400066: Poster_frame_1_floral001
+    400068: Poster_frame_1_floral002
+    400070: Poster_frame_1_floral003
+    400072: Poster_frame_1_floral004
+    400074: Poster_frame_1_floral005
+    400076: Poster_frame_1_floral006
+    400078: //RootNode
+    400080: RH_posters_floral
+    2100000: Frame_black_texture 1
+    2100002: RH_Poster_floral_3
+    2100004: Frame_black_texture
+    2100006: RH_Poster_floral_2
+    2100008: RH_Poster_floral_1
+    2100010: RH_Poster_floral_6
+    2100012: RH_Poster_floral_5
+    2100014: RH_Poster_floral_4
+    2300000: Line1789545480
+    2300002: Line1789545481
+    2300004: Line1789545482
+    2300006: Line1789545483
+    2300008: Line1789545484
+    2300010: Line1789545485
+    2300012: Line1789545486
+    2300014: Line1789545487
+    2300016: Line1789545488
+    2300018: Line1789545489
+    2300020: Line1789545490
+    2300022: Line1789545491
+    2300024: Object5336
+    2300026: Object5337
+    2300028: Object5338
+    2300030: Object5339
+    2300032: Object5340
+    2300034: Object5341
+    2300036: Object5342
+    2300038: Object5343
+    2300040: Object5344
+    2300042: Object5345
+    2300044: Object5346
+    2300046: Object5347
+    2300048: Object5348
+    2300050: Object5349
+    2300052: Object5350
+    2300054: Object5351
+    2300056: Object5352
+    2300058: Object5353
+    3300000: Line1789545480
+    3300002: Line1789545481
+    3300004: Line1789545482
+    3300006: Line1789545483
+    3300008: Line1789545484
+    3300010: Line1789545485
+    3300012: Line1789545486
+    3300014: Line1789545487
+    3300016: Line1789545488
+    3300018: Line1789545489
+    3300020: Line1789545490
+    3300022: Line1789545491
+    3300024: Object5336
+    3300026: Object5337
+    3300028: Object5338
+    3300030: Object5339
+    3300032: Object5340
+    3300034: Object5341
+    3300036: Object5342
+    3300038: Object5343
+    3300040: Object5344
+    3300042: Object5345
+    3300044: Object5346
+    3300046: Object5347
+    3300048: Object5348
+    3300050: Object5349
+    3300052: Object5350
+    3300054: Object5351
+    3300056: Object5352
+    3300058: Object5353
+    4300000: Line1789545480
+    4300002: Line1789545481
+    4300004: Object5336
+    4300006: Object5337
+    4300008: Object5338
+    4300010: Line1789545482
+    4300012: Line1789545483
+    4300014: Object5339
+    4300016: Object5340
+    4300018: Object5341
+    4300020: Line1789545484
+    4300022: Line1789545485
+    4300024: Object5342
+    4300026: Object5343
+    4300028: Object5344
+    4300030: Line1789545490
+    4300032: Line1789545491
+    4300034: Object5351
+    4300036: Object5352
+    4300038: Object5353
+    4300040: Line1789545488
+    4300042: Line1789545489
+    4300044: Object5348
+    4300046: Object5349
+    4300048: Object5350
+    4300050: Line1789545486
+    4300052: Line1789545487
+    4300054: Object5345
+    4300056: Object5346
+    4300058: Object5347
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 5
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,38 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 5 5.0.5.1846 Release
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl tbl014_wood1__Vr
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.898039 0.898039 0.898039
+illum 2
+Ns 32
+map_Kd TBL01401.jpg
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl tbl014_wood2__Vr
+Ka 0 0 0
+Kd 1 1 1
+Ks 0.898039 0.898039 0.898039
+illum 2
+Ns 32
+map_Kd TBL01402.jpg
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
