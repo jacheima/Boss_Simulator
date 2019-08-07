@@ -1,96 +1,36 @@
 fileFormatVersion: 2
-guid: ec8fd00ffa2f4704bb3766998da729ce
+guid: f2b801dda0d85364bb354c0ea7b7cd6c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: pCylinder1
-    100004: pCylinder13
-    100006: pCylinder14
-    100008: pCylinder15
-    100010: pCylinder2
-    100012: pCylinder3
-    100014: pCylinder4
-    100016: pCylinder5
-    100018: polySurface1
-    100020: polySurface1 1
-    100022: polySurface2
-    100024: polySurface6
-    100026: polySurface7
-    100028: polySurface8
-    100030: polySurface9
-    100032: polySurface9 1
-    100034: pSphere1
-    100036: pSphere2
-    100038: pSphere3
-    100040: pSphere6
-    100042: pSphere7
-    100044: transform1
-    100046: transform10
-    100048: transform2
-    100050: transform20
-    100052: transform21
-    100054: transform22
-    100056: transform23
-    100058: transform24
-    100060: transform25
-    100062: transform26
-    100064: transform27
-    100066: transform28
-    100068: transform29
-    100070: transform3
-    100072: transform4
-    100074: transform5
-    100076: transform6
-    100078: transform7
-    100080: transform8
-    100082: transform9
+    100004: pCylinder2
+    100006: pCylinder3
+    100008: pCylinder4
+    100010: pCylinder5
     400000: //RootNode
     400002: pCylinder1
-    400004: pCylinder13
-    400006: pCylinder14
-    400008: pCylinder15
-    400010: pCylinder2
-    400012: pCylinder3
-    400014: pCylinder4
-    400016: pCylinder5
-    400018: polySurface1
-    400020: polySurface1 1
-    400022: polySurface2
-    400024: polySurface6
-    400026: polySurface7
-    400028: polySurface8
-    400030: polySurface9
-    400032: polySurface9 1
-    400034: pSphere1
-    400036: pSphere2
-    400038: pSphere3
-    400040: pSphere6
-    400042: pSphere7
-    400044: transform1
-    400046: transform10
-    400048: transform2
-    400050: transform20
-    400052: transform21
-    400054: transform22
-    400056: transform23
-    400058: transform24
-    400060: transform25
-    400062: transform26
-    400064: transform27
-    400066: transform28
-    400068: transform29
-    400070: transform3
-    400072: transform4
-    400074: transform5
-    400076: transform6
-    400078: transform7
-    400080: transform8
-    400082: transform9
+    400004: pCylinder2
+    400006: pCylinder3
+    400008: pCylinder4
+    400010: pCylinder5
     2100000: lambert1
-    2300000: polySurface9
-    3300000: polySurface9
-    4300000: polySurface9
+    2300000: pCylinder1
+    2300002: pCylinder2
+    2300004: pCylinder3
+    2300006: pCylinder4
+    2300008: pCylinder5
+    3300000: pCylinder1
+    3300002: pCylinder2
+    3300004: pCylinder3
+    3300006: pCylinder4
+    3300008: pCylinder5
+    4300000: pCylinder1
+    4300002: pCylinder2
+    4300004: pCylinder3
+    4300006: pCylinder4
+    4300008: pCylinder5
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -122,7 +62,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 20
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
