@@ -164,7 +164,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 573290994}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.05
@@ -255,12 +255,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4f980d3dbf32c4186e769eb8504261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fear: 0
-  Anger: 0
-  Joy: 0
-  Sadness: 19.4
-  EmotionModifier: 10
-  emotionState: 4
+  angerScale: 0
+  fearScale: 0
+  sadnessScale: 15
+  disgustScale: 0
+  trustScale: 0
+  joyScale: 0
+  surpriseScale: 0
+  anticipationScale: 0
+  EmotionModifier: 0
+  emotionState: 7
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951775401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.95, y: 0, z: 2.31}
+  m_LocalPosition: {x: -2.95, y: 0, z: 2.916}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -492,12 +496,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4f980d3dbf32c4186e769eb8504261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fear: 0
-  Anger: 0
-  Joy: 100
-  Sadness: 0
+  angerScale: 0
+  fearScale: 0
+  sadnessScale: 0
+  disgustScale: 0
+  trustScale: 0
+  joyScale: 100
+  surpriseScale: 0
+  anticipationScale: 0
   EmotionModifier: 10
-  emotionState: 3
+  emotionState: 17
 --- !u!135 &951775407
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -825,10 +833,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4f980d3dbf32c4186e769eb8504261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fear: 0
-  Anger: 100
-  Joy: 0
-  Sadness: 0
+  angerScale: 100
+  fearScale: 0
+  sadnessScale: 0
+  disgustScale: 0
+  trustScale: 0
+  joyScale: 0
+  surpriseScale: 0
+  anticipationScale: 0
   EmotionModifier: 10
   emotionState: 2
 --- !u!135 &1822043707
