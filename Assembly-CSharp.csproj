@@ -152,8 +152,10 @@
      <Compile Include="Assets\Resources\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
      <Compile Include="Assets\Scripts\Aura_Scripts\Aura_Controller.cs" />
      <Compile Include="Assets\Scripts\Aura_Scripts\Aura_Master.cs" />
+     <Compile Include="Assets\Scripts\Aura_Scripts\Aura_Transference.cs" />
      <Compile Include="Assets\Scripts\Aura_Scripts\Emotions.cs" />
      <Compile Include="Assets\Scripts\Function_Scripts\Reference.cs" />
+     <Compile Include="Assets\Scripts\Globals\Globals.cs" />
      <Compile Include="Assets\Scripts\Master_Scripts\Event_Master.cs" />
      <None Include="Assets\Resources\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Resources\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
