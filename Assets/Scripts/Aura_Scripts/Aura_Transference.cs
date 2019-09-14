@@ -7,23 +7,19 @@ public class Aura_Transference : MonoBehaviour
     #region  ** VARIABLES **
     [SerializeField]
     [Tooltip("This is how often I affect others")]
-    private float emotionalTransferenceRate;
+    public float emotionalTransferenceRate;
 
     [SerializeField]
     [Tooltip("This is how my emotions are positively affected")]
     private float emotionalGainStrength;
 
     [SerializeField]
-    [Tooltip("This is how my emotions are negativly affected")]
-    private float emotionalLossStrength;
-
-    [SerializeField]
-    [Range(0, 100)]
+    [Range(-100, 100)]
     [Tooltip("This is my maximum emotion scale ammount")]
     private int emotionalScaleMax;
 
     [SerializeField]
-    [Range(0, 100)]
+    [Range(-100, 100)]
     [Tooltip("This is my minimum emotion scale ammount")]
     private int emotionalScaleMin;
 
@@ -34,6 +30,7 @@ public class Aura_Transference : MonoBehaviour
     #endregion
 
     Emotions eScript;
+    public GameObject Aura;
     public Aura_Master auraMaster;
     public float distance;
     public float maximumTransferenceDistance = 3;
@@ -48,11 +45,12 @@ public class Aura_Transference : MonoBehaviour
     {
         Init();
         auraMaster.ModifyEmotion += ModifyEmotion;
+        Aura.SetActive(false);
     }
 
     void OnDisable()
     {
-
+        auraMaster.ModifyEmotion -= ModifyEmotion;
     }
 
     /// <summary>
@@ -61,6 +59,11 @@ public class Aura_Transference : MonoBehaviour
     private void OnTriggerEnter(Collider col)
     {
         timeToNextTransference = col.gameObject.GetComponent<Aura_Transference>().emotionalTransferenceRate;
+    }
+
+    private void OnTriggerExit(Collider col)
+    {
+        col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(false);
     }
 
     /// <summary>
@@ -73,6 +76,7 @@ public class Aura_Transference : MonoBehaviour
         //if the distance is less or equal to the maximum transference distance of the colided object...
         if (distance <= col.gameObject.GetComponent<Aura_Transference>().maximumTransferenceDistance)
         {
+            col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(true);
             //start the timer...
             timeToNextTransference -= Time.deltaTime;
             //check if the timer is less or equal to zero
@@ -81,119 +85,71 @@ public class Aura_Transference : MonoBehaviour
                 //if the timer reached zero, we call the modify emotion functions, 
                 //pass in the state of the other person, and their modifier value...
                 auraMaster.EventModifyEmotion(col.gameObject.GetComponent<Emotions>().emotionState, (emotionalGainStrength / distance));
+                col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(false);
                 //reset the transference rate back to the other objects transference rate (this covers if we stay in their aura)
                 //if we leave the aura and enter a different the above function will be ran, and the rate will be set accordingly...
                 timeToNextTransference = col.gameObject.GetComponent<Aura_Transference>().emotionalTransferenceRate;
             }
-        }
+        } 
     }
-
-    //private void OnTriggerExit(Collider col)
-    //{
-    //    //TODO:: call Aura exit event if needed
-    //}
 
     /// <summary>
     /// This function currently handles all our emotion changing
     /// this will likely be changed into an event that is broken up
     /// to improve its function..
     /// </summary>
-    public void ModifyEmotion(Globals.EMOTION emotion, float transferenceValue)
+    public void ModifyEmotion(Globals.EMOTIONS emotion, float transferenceValue)
     {
         switch (emotion)
         {
-            // anger Scale
-            case Globals.EMOTION.ANNOYANCE:
-                //if the emotion is annoyance, we call the transference function
-                //and pass in the angerscale, and transference value, and then
-                //assign the result to the angerscale.
+            // happiness Scale
+            case Globals.EMOTIONS.HAPPY:
+                eScript.happinessScale = Transference(eScript.happinessScale, (int)transferenceValue);
+                break;
+            case Globals.EMOTIONS.SAD:
+                eScript.happinessScale = Transference(eScript.happinessScale, -(int)transferenceValue);
+                break;
+            
+            // anger scale
+            case Globals.EMOTIONS.ANGER:
                 eScript.angerScale = Transference(eScript.angerScale, (int)transferenceValue);
                 break;
-            case Globals.EMOTION.ANGER:
-                //angerScale = Transference(angerScale, (int)transferenceValue);
-                eScript.fearScale = Transference(eScript.fearScale, (int)transferenceValue);
-                eScript.joyScale = Transference(eScript.joyScale, -((int)transferenceValue) / 2);
-                break;
-            case Globals.EMOTION.RAGE:
-                eScript.angerScale = Transference(eScript.angerScale, (int)transferenceValue);
+            case Globals.EMOTIONS.FEAR:
+                eScript.angerScale = Transference(eScript.angerScale, -(int)transferenceValue);
                 break;
 
-            // fearScale
-            case Globals.EMOTION.APPREHENSION:
-                eScript.fearScale = Transference(eScript.fearScale, (int)transferenceValue);
+            // energy scale
+            case Globals.EMOTIONS.ENERGIZED:
+                eScript.energyScale = Transference(eScript.energyScale, (int)transferenceValue);
                 break;
-            case Globals.EMOTION.FEAR:
-                eScript.fearScale = Transference(eScript.fearScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTION.TERROR:
-                eScript.fearScale = Transference(eScript.fearScale, (int)transferenceValue);
+            case Globals.EMOTIONS.TIRED:
+                eScript.energyScale = Transference(eScript.energyScale, -(int)transferenceValue);
                 break;
 
-            // sadnessScale
-            case Globals.EMOTION.GRIEF:
-                eScript.sadnessScale = Transference(eScript.sadnessScale, (int)transferenceValue);
+            // confidence scale
+            case Globals.EMOTIONS.CONFIDENT:
+                eScript.confidenceScale = Transference(eScript.confidenceScale, (int)transferenceValue);
                 break;
-            case Globals.EMOTION.SADNESS:
-                eScript.sadnessScale = Transference(eScript.sadnessScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTION.PENSIVENESS:
-                eScript.sadnessScale = Transference(eScript.sadnessScale, (int)transferenceValue);
+            case Globals.EMOTIONS.EMBARRASSED:
+                eScript.confidenceScale = Transference(eScript.confidenceScale, -(int)transferenceValue);
                 break;
 
-            // disgustScale
-            case Globals.EMOTION.BOREDOM:
-                eScript.disgustScale = Transference(eScript.disgustScale, (int)transferenceValue);
+            // interest scale
+            case Globals.EMOTIONS.SURPRISED:
+                eScript.interestScale = Transference(eScript.interestScale, (int)transferenceValue);
                 break;
-            case Globals.EMOTION.DISGUST:
-                eScript.disgustScale = Transference(eScript.disgustScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTION.LOATHING:
-                eScript.disgustScale = Transference(eScript.disgustScale, (int)transferenceValue);
+            case Globals.EMOTIONS.DISAPPOINTMENT:
+                eScript.interestScale = Transference(eScript.interestScale, -(int)transferenceValue);
                 break;
 
-            // trustScale
-            case Globals.EMOTION.ACCEPTANCE:
-                eScript.trustScale = Transference(eScript.trustScale, (int)transferenceValue);
+            // entertainment scale
+            case Globals.EMOTIONS.BOREDOM:
+                eScript.entertainmentScale = Transference(eScript.entertainmentScale, (int)transferenceValue);
                 break;
-            case Globals.EMOTION.TRUST:
-                eScript.trustScale = Transference(eScript.trustScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTION.ADMIRATION:
-                eScript.trustScale = Transference(eScript.trustScale, (int)transferenceValue);
+            case Globals.EMOTIONS.ENTERTAINED:
+                eScript.entertainmentScale = Transference(eScript.entertainmentScale, -(int)transferenceValue);
                 break;
 
-            // joyScale
-            case Globals.EMOTION.SERENITY:
-                eScript.joyScale = Transference(eScript.joyScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTION.JOY:
-                eScript.joyScale = Transference(eScript.joyScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTION.ECSTASY:
-                eScript.joyScale = Transference(eScript.joyScale, (int)transferenceValue);
-                break;
-
-            // surpriseScale
-            case Globals.EMOTION.DISTRACTION:
-                eScript.surpriseScale = Transference(eScript.surpriseScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTION.SURPRISE:
-                eScript.surpriseScale = Transference(eScript.surpriseScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTION.AMAZEMENT:
-                eScript.surpriseScale = Transference(eScript.surpriseScale, (int)transferenceValue);
-                break;
-
-            // anticipationScale
-            case Globals.EMOTION.INTEREST:
-                eScript.anticipationScale = Transference(eScript.anticipationScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTION.ANTICIPATION:
-                eScript.anticipationScale = Transference(eScript.anticipationScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTION.VIGILANCE:
-                eScript.anticipationScale = Transference(eScript.anticipationScale, (int)transferenceValue);
-                break;
             default:
                 break;
         }
