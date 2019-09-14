@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/LevelOne_Prototype.unity
+- path: Assets/Scenes/EMO_AI.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
