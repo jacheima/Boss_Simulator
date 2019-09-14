@@ -1,0 +1,66 @@
+﻿__________________________________________________________________________________________
+
+Package "FBassic Assets""
+Version 1.2.5
+
+Made by FImpossible Games - Filip Moeglich
+https://www.FilipMoeglich.pl
+FImpossibleGames@Gmail.com or Filip.Moeglich@Gmail.com
+
+__________________________________________________________________________________________
+
+Unity Connect: https://connect.unity.com/u/5b2e9407880c6425c117fab1
+Youtube: https://www.youtube.com/channel/UCDvDWSr6MAu1Qy9vX4w8jkw
+Facebook: https://www.facebook.com/FImpossibleGames
+Twitter (@FimpossibleG): https://twitter.com/FImpossibleG
+Google+: https://plus.google.com/u/3/115325467674876785237
+
+__________________________________________________________________________________________
+Description:
+
+FBasic assets is a collection of different helpful scripts and behaviours.
+They are used in my packages to make demo scenes more interactive and to help algorithms 
+by using shared logic methods.
+Almost all scripts are commented in detailed way.
+Feel free to use this stuff in your project, or extend some of this classes for custom use.
+
+Main features:
+-Includes interactive demo scene
+-Includes full source code
+-Scripts are commented in detailed way
+
+- Character movement scripts based on CharacterController component and other on Rigidbody
+- Camera movement scripts for free camera with smoothness parameters and simple TPP camera
+- Auto generating interaction area component with examples of knob and lever
+- Vector, Ease, Logic and other helper classes with useful static methods
+- Simple behaviours like rotator, projectile, spinner, material offset and others.
+- Behaviours simulating vibration, fly, power up movement
+- Generic class for choosing elements form list without repetition
+
+__________________________________________________________________________________________
+Version history:
+
+V1.0 - 18/07/2018:
+
+[---] Initial release
+
+V1.1
+- Added new features for TPP camera - smoothing movement / rotation and small fixes
+- Updated and upgraded FBasic_RigidbodyMovement and FBasic_FheelekController also new fheelek fighter controller
+- Editor folder with handy classes for editor stuff like custom inspector etc.
+- FBasic_MoveObjectTo changed name to FBasic_SlideObjectTo
+- Small changes in few mini scripts
+
+V1.2
+- Added draggable physical objects scripts and example scene
+- Added some new handy scritpts
+- Added "Phantom Refraction" shader
+- Added new models with animations designed for tests
+- Polishes in some scripts
+
+V1.2.5
+- Added "FBasic_Conversation" system for basic dialogue logics
+- Added new features to "FAnimationClips" class
+- Added class "FBasics_PathData" full of handy methods to work on movement over simple paths
+- Upgraded few scripts
+

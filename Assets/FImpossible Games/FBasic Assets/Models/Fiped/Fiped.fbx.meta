@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: 839250122378b5d479a44ddd36c19e3a
+timeCreated: 1540481909
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Backup
+    100002: BHeadDown
+    100004: BHeadDown_1
+    100006: BHeadDown_1_2
+    100008: BHeadDown_2
+    100010: BHeadUp
+    100012: BHeadUp_1
+    100014: BHeadUp_1_2
+    100016: BHeadUp_2
+    100018: BHeadUp_2_2
+    100020: BHeadUp_2_3
+    100022: BLegBack
+    100024: BLegBack_1
+    100026: BLegBack_1_2
+    100028: BLegBack_2
+    100030: BLegBack_2_2
+    100032: BLegBack_2_3
+    100034: BLegBack_3
+    100036: BLegBack_3_2
+    100038: BLegFront
+    100040: BLegFront_1
+    100042: BLegFront_1_2
+    100044: BLegFront_2
+    100046: BLegFront_2_2
+    100048: BLegFront_2_3
+    100050: BLegFront_3
+    100052: BLegFront_3_2
+    100054: BNeck
+    100056: BNeck_1
+    100058: BNeck_1_2
+    100060: BNeck_2
+    100062: BNeck_2_2
+    100064: BNeck_2_3
+    100066: BPelvis
+    100068: BPelvis_2
+    100070: BRootBone
+    100072: BSpine_1
+    100074: BSpine_1_2
+    100076: BSpine_2
+    100078: BSpine_2_2
+    100080: BSpine_3
+    100082: BSpine_3_2
+    100084: Cube
+    100086: //RootNode
+    100088: Fiped
+    100090: Fiped_2
+    100092: FipedMesh
+    100094: Subdivision_Surface
+    100096: BLegBack_2_Goal
+    100098: BLegFront_2_Goal
+    400000: Backup
+    400002: BHeadDown
+    400004: BHeadDown_1
+    400006: BHeadDown_1_2
+    400008: BHeadDown_2
+    400010: BHeadUp
+    400012: BHeadUp_1
+    400014: BHeadUp_1_2
+    400016: BHeadUp_2
+    400018: BHeadUp_2_2
+    400020: BHeadUp_2_3
+    400022: BLegBack
+    400024: BLegBack_1
+    400026: BLegBack_1_2
+    400028: BLegBack_2
+    400030: BLegBack_2_2
+    400032: BLegBack_2_3
+    400034: BLegBack_3
+    400036: BLegBack_3_2
+    400038: BLegFront
+    400040: BLegFront_1
+    400042: BLegFront_1_2
+    400044: BLegFront_2
+    400046: BLegFront_2_2
+    400048: BLegFront_2_3
+    400050: BLegFront_3
+    400052: BLegFront_3_2
+    400054: BNeck
+    400056: BNeck_1
+    400058: BNeck_1_2
+    400060: BNeck_2
+    400062: BNeck_2_2
+    400064: BNeck_2_3
+    400066: BPelvis
+    400068: BPelvis_2
+    400070: BRootBone
+    400072: BSpine_1
+    400074: BSpine_1_2
+    400076: BSpine_2
+    400078: BSpine_2_2
+    400080: BSpine_3
+    400082: BSpine_3_2
+    400084: Cube
+    400086: //RootNode
+    400088: Fiped
+    400090: Fiped_2
+    400092: FipedMesh
+    400094: Subdivision_Surface
+    400096: BLegBack_2_Goal
+    400098: BLegFront_2_Goal
+    2100000: No Name
+    2300000: Cube
+    2300002: FipedMesh
+    3300000: Cube
+    3300002: FipedMesh
+    4300000: Cube
+    4300002: FipedMesh
+    7400000: Fiped_Idle
+    7400002: Fiped_Walk
+    9500000: //RootNode
+    13700000: FipedMesh
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Fiped_Idle
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Fiped_Walk
+      takeName: C4D Animation Take
+      firstFrame: 30
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,271 @@
+fileFormatVersion: 2
+guid: b1fe2c76a591eef45a4bdb41cabcf0e9
+timeCreated: 1529350231
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BHead_1
+    100002: BHead_2
+    100004: BHead_3
+    100006: BHead_4
+    100008: BHead_5
+    100010: BHead_6
+    100012: BHeadD
+    100014: BHeadD_1
+    100016: BLegL
+    100018: BLegL_1
+    100020: BLegL_2
+    100022: BLegL_2_Goal
+    100024: BLegL_3
+    100026: BLegL_Pole
+    100028: BLegR
+    100030: BLegR_1
+    100032: BLegR_2
+    100034: BLegR_2_Goal
+    100036: BLegR_3
+    100038: BLegR_Pole
+    100040: BLegStartL
+    100042: BLegStartR
+    100044: BSpine
+    100046: BTail
+    100048: BTail_1
+    100050: BTail_2
+    100052: BTail_3
+    100054: BTail_4
+    100056: Connectors
+    100058: FBody
+    100060: //RootNode
+    100062: FGear
+    100064: AxisFlip
+    400000: BHead_1
+    400002: BHead_2
+    400004: BHead_3
+    400006: BHead_4
+    400008: BHead_5
+    400010: BHead_6
+    400012: BHeadD
+    400014: BHeadD_1
+    400016: BLegL
+    400018: BLegL_1
+    400020: BLegL_2
+    400022: BLegL_2_Goal
+    400024: BLegL_3
+    400026: BLegL_Pole
+    400028: BLegR
+    400030: BLegR_1
+    400032: BLegR_2
+    400034: BLegR_2_Goal
+    400036: BLegR_3
+    400038: BLegR_Pole
+    400040: BLegStartL
+    400042: BLegStartR
+    400044: BSpine
+    400046: BTail
+    400048: BTail_1
+    400050: BTail_2
+    400052: BTail_3
+    400054: BTail_4
+    400056: Connectors
+    400058: FBody
+    400060: //RootNode
+    400062: FGear
+    400064: AxisFlip
+    2100000: No Name
+    2100002: Mat.1
+    2100004: Mat
+    2300000: Connectors
+    2300002: FGear
+    3300000: Connectors
+    3300002: FGear
+    4300000: Connectors
+    4300002: FGear
+    4300004: FBody
+    7400000: FDoubleLeg_Idle
+    7400002: FDoubleLeg_Cry
+    7400004: FDoubleLeg_Walk
+    7400006: FDoubleLeg_Look
+    9500000: //RootNode
+    13700000: FBody
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: FDoubleLeg_Idle
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FDoubleLeg_Cry
+      takeName: C4D Animation Take
+      firstFrame: 21
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FDoubleLeg_Walk
+      takeName: C4D Animation Take
+      firstFrame: 50
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: FDoubleLeg_Look
+      takeName: C4D Animation Take
+      firstFrame: 80
+      lastFrame: 110
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

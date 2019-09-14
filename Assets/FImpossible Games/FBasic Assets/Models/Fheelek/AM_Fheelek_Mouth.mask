@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: AM_Fheelek_Mouth
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: BSkeleton
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArm
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArm/BArm2
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArm/BArm2/BHandR
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArm/BArm2/BHandR/BHandR_1
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArm/BArm2/BHandR/BHandR_1/BFingerR
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArm/BArm2/BHandR/BHandR_1/BFingerR/BHandR_2
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArm/BArm2/BHandR/BHandR_1/BHandR_2_2
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArm/BArm2/BHandR/BHandR_1/BHandR_2_2/BHandR_3
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArmL
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArmL/BArmL2
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArmL/BArmL2/BHandL
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArmL/BArmL2/BHandL/BHandL_1
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArmL/BArmL2/BHandL/BHandL_1/BFingerL
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArmL/BArmL2/BHandL/BHandL_1/BFingerL/BHandL_2
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArmL/BArmL2/BHandL/BHandL_1/BHandL_2_2
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BArmL/BArmL2/BHandL/BHandL_1/BHandL_2_2/BHandL_3
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BSpineC
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BSpineC/BSpine_2
+    m_Weight: 0
+  - m_Path: BSkeleton/BSpine_1/BSpineC/BSpine_2/BHeadLower
+    m_Weight: 1
+  - m_Path: BSkeleton/BSpine_1/BSpineC/BSpine_2/BHeadLower/BSpine_3
+    m_Weight: 1
+  - m_Path: BSkeleton/BSpine_1/BSpineC/BSpine_2/BSpine_3_2
+    m_Weight: 1
+  - m_Path: BSkeleton/BSpine_1/BSpineC/BSpine_2/BSpine_3_2/BHeadHigher
+    m_Weight: 1
+  - m_Path: BSkeleton/BSpine_1/BSpineC/BSpine_2/BSpine_3_2/BHeadHigher/BSpine_4
+    m_Weight: 1
+  - m_Path: FBody
+    m_Weight: 0

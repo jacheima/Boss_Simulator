@@ -1,0 +1,307 @@
+fileFormatVersion: 2
+guid: 1b789a1e5b3ee984bb164f7a69cc06a9
+timeCreated: 1528578221
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BArm
+    100002: BArm2
+    100004: BArmL
+    100006: BArmL2
+    100008: BHandL
+    100010: BHandL_1
+    100012: BHandL_2
+    100014: BHandL_2_2
+    100016: BHandL_3
+    100018: BHandR
+    100020: BHandR_1
+    100022: BHandR_2
+    100024: BHandR_2_2
+    100026: BHandR_3
+    100028: BSkeleton
+    100030: BSpine_1
+    100032: BSpine_2
+    100034: BSpine_3
+    100036: BSpine_3_2
+    100038: BSpine_4
+    100040: Connector
+    100042: F_Inner
+    100044: FBody
+    100046: //RootNode
+    100048: Holders
+    100050: Shield_Inner
+    100052: Wheel
+    100054: BFingerL
+    100056: BFingerR
+    100058: BHeadHigher
+    100060: BHeadLower
+    100062: BSpineC
+    400000: BArm
+    400002: BArm2
+    400004: BArmL
+    400006: BArmL2
+    400008: BHandL
+    400010: BHandL_1
+    400012: BHandL_2
+    400014: BHandL_2_2
+    400016: BHandL_3
+    400018: BHandR
+    400020: BHandR_1
+    400022: BHandR_2
+    400024: BHandR_2_2
+    400026: BHandR_3
+    400028: BSkeleton
+    400030: BSpine_1
+    400032: BSpine_2
+    400034: BSpine_3
+    400036: BSpine_3_2
+    400038: BSpine_4
+    400040: Connector
+    400042: F_Inner
+    400044: FBody
+    400046: //RootNode
+    400048: Holders
+    400050: Shield_Inner
+    400052: Wheel
+    400054: BFingerL
+    400056: BFingerR
+    400058: BHeadHigher
+    400060: BHeadLower
+    400062: BSpineC
+    2100000: No Name
+    2100002: Mat
+    2100004: Mat.1
+    2300000: Connector
+    2300002: F_Inner
+    2300004: Holders
+    2300006: Shield_Inner
+    2300008: Wheel
+    3300000: Connector
+    3300002: F_Inner
+    3300004: Holders
+    3300006: Shield_Inner
+    3300008: Wheel
+    4300000: FBody
+    4300002: Wheel
+    4300004: Shield_Inner
+    4300006: Holders
+    4300008: F_Inner
+    4300010: Connector
+    7400000: A_Fheelek_Idle
+    7400002: A_Fheelek_Run
+    7400004: A_Fheelek_Falling
+    7400006: A_Fheelek_Landing
+    7400008: A_Fheelek_Jump
+    9500000: //RootNode
+    13700000: FBody
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: A_Fheelek_Idle
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 2.83
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: A_Fheelek_Run
+      takeName: C4D Animation Take
+      firstFrame: 25
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: A_Fheelek_Falling
+      takeName: C4D Animation Take
+      firstFrame: 50
+      lastFrame: 60
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: A_Fheelek_Landing
+      takeName: C4D Animation Take
+      firstFrame: 66
+      lastFrame: 74
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: A_Fheelek_Jump
+      takeName: C4D Animation Take
+      firstFrame: 80
+      lastFrame: 89
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
