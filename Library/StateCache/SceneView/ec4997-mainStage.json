@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":false,"showMaterialUpdate":false,"showSkybox":false,"showFlares":false,"showImageEffects":false,"showParticleSystems":false},"in2DMode":false,"pivot":{"x":-0.703839123249054,"y":-78.256103515625,"z":78.05323028564453},"rotation":{"x":-0.3875216841697693,"y":0.013269083574414254,"z":-0.005237226374447346,"w":-0.9221844673156738},"size":163.31460571289063,"orthographic":false}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":false,"pivot":{"x":0.22121182084083558,"y":0.17727497220039369,"z":-0.2829267084598541},"rotation":{"x":0.01982058398425579,"y":0.9758645296096802,"z":-0.1930563896894455,"w":0.10018141567707062},"size":13.367762565612793,"orthographic":false}
+>>>>>>> develop
