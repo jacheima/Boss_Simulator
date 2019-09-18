@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     public GameState gameState;
 
-    private void Awake()
+    public void Start()
     {
         if (instance == null)
         {
@@ -37,13 +37,9 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(instance);
+            Debug.Log("Destroying Copycat");
+            Destroy(this);
         }
-    }
-
-    void Start()
-    {
-        
     }
 
     void Update()

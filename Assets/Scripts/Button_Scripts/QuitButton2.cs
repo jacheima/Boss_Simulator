@@ -10,7 +10,9 @@ public class QuitButton2 : MonoBehaviour
     this will take the player back to the main menu where they can exit.
     */
 
-    public void QuitButton2_Click()
+    public GameManager GM;
+
+    void QuitButton2_Click()
     {
         SceneManager.LoadScene(0);
     }
