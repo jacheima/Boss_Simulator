@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuitButton2 : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class QuitButton2 : MonoBehaviour
 
     public void QuitButton2_Click()
     {
-        GameManager.instance.SetGameState((int)GameManager.GameState.Start);
+        SceneManager.LoadScene(0);
     }
 
     void Start()

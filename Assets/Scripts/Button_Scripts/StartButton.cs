@@ -13,5 +13,6 @@ public class StartButton : MonoBehaviour
     public void StartButton_Click()
     {
         SceneManager.LoadScene(1);
+        GameManager.instance.SetGameState((int)GameManager.GameState.Level);
     }
 }
