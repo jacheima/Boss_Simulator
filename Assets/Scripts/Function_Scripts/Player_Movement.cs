@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+    public float speed;
+
+    public float rotateSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,19 +18,19 @@ public class Player_Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(Vector3.forward);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(-Vector3.forward);
+            transform.Translate(-Vector3.forward * speed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.left);
+            transform.Rotate(Vector3.down * rotateSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right);
+            transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
         }
     }
 }
