@@ -59,7 +59,13 @@ public class Aura_Transference : MonoBehaviour
     /// </summary>
     private void OnTriggerEnter(Collider col)
     {
-        timeToNextTransference = col.gameObject.GetComponent<Aura_Transference>().emotionalTransferenceRate;
+        if(col.gameObject.tag != "Player")
+        {
+            if (col.gameObject.GetComponent<Aura_Transference>() != null)
+            {
+                timeToNextTransference = col.gameObject.GetComponent<Aura_Transference>().emotionalTransferenceRate;
+            }
+        }
     }
 
     private void OnTriggerExit(Collider col)
@@ -79,29 +85,32 @@ public class Aura_Transference : MonoBehaviour
     {
         if (col.gameObject.tag != "Player")
         {
-            //check this distance between this object and the collided object...
-            distance = Vector3.Distance(col.gameObject.transform.position, transform.position);
-            //if the distance is less or equal to the maximum transference distance of the colided object...
-            if (distance <= col.gameObject.GetComponent<Aura_Transference>().maximumTransferenceDistance)
+            if (col.gameObject.GetComponent<Aura_Transference>() != null)
             {
-                //col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(true);
-                //StartCoroutine (ShowAura(col.gameObject.GetComponent<Aura_Transference>()));
-                cr = StartCoroutine(ShowAura(col.gameObject.GetComponent<Aura_Transference>()));
-                //start the timer...
-                timeToNextTransference -= Time.deltaTime;
-                //check if the timer is less or equal to zero
-                if (timeToNextTransference <= 0)
+                //check this distance between this object and the collided object...
+                distance = Vector3.Distance(col.gameObject.transform.position, transform.position);
+                //if the distance is less or equal to the maximum transference distance of the colided object...
+                if (distance <= col.gameObject.GetComponent<Aura_Transference>().maximumTransferenceDistance)
                 {
+                    //col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(true);
+                    //StartCoroutine (ShowAura(col.gameObject.GetComponent<Aura_Transference>()));
+                    cr = StartCoroutine(ShowAura(col.gameObject.GetComponent<Aura_Transference>()));
+                    //start the timer...
+                    timeToNextTransference -= Time.deltaTime;
+                    //check if the timer is less or equal to zero
+                    if (timeToNextTransference <= 0)
+                    {
 
-                    StopCoroutine(cr);
-                    //if the timer reached zero, we call the modify emotion functions, 
-                    //pass in the state of the other person, and their modifier value...
-                    //auraMaster.EventModifyEmotion(col.gameObject.GetComponent<Emotions>().emotionState);
-                    ModifyEmotion(col.gameObject.GetComponent<Emotions>().emotionState);
-                    //col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(false);
-                    //reset the transference rate back to the other objects transference rate (this covers if we stay in their aura)
-                    //if we leave the aura and enter a different the above function will be ran, and the rate will be set accordingly...
-                    timeToNextTransference = col.gameObject.GetComponent<Aura_Transference>().emotionalTransferenceRate;
+                        StopCoroutine(cr);
+                        //if the timer reached zero, we call the modify emotion functions, 
+                        //pass in the state of the other person, and their modifier value...
+                        //auraMaster.EventModifyEmotion(col.gameObject.GetComponent<Emotions>().emotionState);
+                        ModifyEmotion(col.gameObject.GetComponent<Emotions>().emotionState);
+                        //col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(false);
+                        //reset the transference rate back to the other objects transference rate (this covers if we stay in their aura)
+                        //if we leave the aura and enter a different the above function will be ran, and the rate will be set accordingly...
+                        timeToNextTransference = col.gameObject.GetComponent<Aura_Transference>().emotionalTransferenceRate;
+                    }
                 }
             }
         }

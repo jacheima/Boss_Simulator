@@ -53,24 +53,32 @@ public class Aura_Transcendence : MonoBehaviour
             switch (emotion)
             {
                 case Globals.EMOTIONS.ANGER:
-                    Debug.Log("Transcend Anger");
-                    c.gameObject.GetComponent<Emotions>().anger += tValue;
-                    StartCoroutine(FlashPanel(angerPanel));
+                    if (c.gameObject.GetComponent<Emotions>() != null)
+                    {
+                        c.gameObject.GetComponent<Emotions>().anger += tValue;
+                        StartCoroutine(FlashPanel(angerPanel));
+                    }
                     break;
                 case Globals.EMOTIONS.FEAR:
-                    Debug.Log("Transcend Fear");
-                    c.gameObject.GetComponent<Emotions>().fear += tValue;
-                    StartCoroutine(FlashPanel(fearPanel));
+                    if (c.gameObject.GetComponent<Emotions>() != null)
+                    {
+                        c.gameObject.GetComponent<Emotions>().fear += tValue;
+                        StartCoroutine(FlashPanel(fearPanel));
+                    }
                     break;
                 case Globals.EMOTIONS.HAPPY:
-                    Debug.Log("Transcend Happy");
-                    c.gameObject.GetComponent<Emotions>().happiness += tValue;
-                    StartCoroutine(FlashPanel(happyPanel));
+                    if (c.gameObject.GetComponent<Emotions>() != null)
+                    {
+                        c.gameObject.GetComponent<Emotions>().happiness += tValue;
+                        StartCoroutine(FlashPanel(happyPanel));
+                    }
                     break;
                 case Globals.EMOTIONS.SAD:
-                    Debug.Log("Transcend Sad");
-                    c.gameObject.GetComponent<Emotions>().sadness += tValue;
-                    StartCoroutine(FlashPanel(sadPanel));
+                    if (c.gameObject.GetComponent<Emotions>() != null)
+                    {
+                        c.gameObject.GetComponent<Emotions>().sadness += tValue;
+                        StartCoroutine(FlashPanel(sadPanel));
+                    }
                     break;
             }
         }
