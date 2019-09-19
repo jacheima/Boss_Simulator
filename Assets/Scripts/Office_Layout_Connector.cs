@@ -14,6 +14,7 @@ public class Office_Layout_Connector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Running Connector Start");
         GM = GameManager.instance;
 
         GM.LevelCanvas = LevelCanvas;

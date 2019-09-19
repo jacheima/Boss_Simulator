@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     public GameState gameState;
 
-    public void Start()
+    public void Awake()
     {
         if (instance == null)
         {
@@ -37,7 +37,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Destroying Copycat");
             Destroy(this);
         }
     }
@@ -60,14 +59,12 @@ public class GameManager : MonoBehaviour
         {
             case GameState.Start:
                 StartCanvas.SetActive(true);
-                LevelCanvas.SetActive(false);
                 MenuCanvas.SetActive(false);
                 QuitCanvas.SetActive(false);
                 break;
 
             case GameState.Level:
                 StartCanvas.SetActive(false);
-                LevelCanvas.SetActive(true);
                 break;
 
             case GameState.Menu:
