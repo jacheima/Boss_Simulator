@@ -11,46 +11,47 @@ public class Aura_Transference : MonoBehaviour
 
     [SerializeField]
     [Tooltip("This is how my emotions are positively affected")]
-    private float emotionalGainStrength;
+    private float emotionalGainRate;
 
     [SerializeField]
-    [Range(-100, 100)]
+    [Range(1.0f, 100.0f)]
     [Tooltip("This is my maximum emotion scale ammount")]
-    private int emotionalScaleMax;
+    private float emotionalMax;
 
     [SerializeField]
-    [Range(-100, 100)]
+    [Range(1.0f, 100.0f)]
     [Tooltip("This is my minimum emotion scale ammount")]
-    private int emotionalScaleMin;
+    private float emotionalMin;
 
     [SerializeField]
     [Range(0.0f, 10.0f)]
     [Tooltip("This is the time in between transferences for me")]
     private float timeToNextTransference;
+
+    [SerializeField]
+    [Range(0.0f, 10.0f)]
+    [Tooltip("This is the time in between transferences for me")]
+    private float internalTransferenceRate;
     #endregion
 
-    Emotions eScript;
     public GameObject Aura;
     public Aura_Master auraMaster;
+    public Emotions e;
     public float distance;
     public float maximumTransferenceDistance = 3;
 
-    // Initialize these values on start...
-    void Init()
-    {
-        eScript = gameObject.GetComponent<Emotions>();
-    }
+    Coroutine cr;
 
+    // Initialize these values on start...
+
+    #region RunTime
     void OnEnable()
     {
-        Init();
-        auraMaster.ModifyEmotion += ModifyEmotion;
         Aura.SetActive(false);
     }
 
     void OnDisable()
     {
-        auraMaster.ModifyEmotion -= ModifyEmotion;
     }
 
     /// <summary>
@@ -66,88 +67,93 @@ public class Aura_Transference : MonoBehaviour
         col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(false);
     }
 
+    void FixedUpdate()
+    {
+        InternalTransferrence(e.emotionState);
+    }
+
     /// <summary>
     /// This function runs as long as were inside the trigger (aura)
     /// </summary>
     private void OnTriggerStay(Collider col)
     {
-        //check this distance between this object and the collided object...
-        distance = Vector3.Distance(col.gameObject.transform.position, this.transform.position);
-        //if the distance is less or equal to the maximum transference distance of the colided object...
-        if (distance <= col.gameObject.GetComponent<Aura_Transference>().maximumTransferenceDistance)
+        if (col.gameObject.tag != "Player")
         {
-            col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(true);
-            //start the timer...
-            timeToNextTransference -= Time.deltaTime;
-            //check if the timer is less or equal to zero
-            if (timeToNextTransference <= 0)
+            //check this distance between this object and the collided object...
+            distance = Vector3.Distance(col.gameObject.transform.position, transform.position);
+            //if the distance is less or equal to the maximum transference distance of the colided object...
+            if (distance <= col.gameObject.GetComponent<Aura_Transference>().maximumTransferenceDistance)
             {
-                //if the timer reached zero, we call the modify emotion functions, 
-                //pass in the state of the other person, and their modifier value...
-                auraMaster.EventModifyEmotion(col.gameObject.GetComponent<Emotions>().emotionState, (emotionalGainStrength / distance));
-                col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(false);
-                //reset the transference rate back to the other objects transference rate (this covers if we stay in their aura)
-                //if we leave the aura and enter a different the above function will be ran, and the rate will be set accordingly...
-                timeToNextTransference = col.gameObject.GetComponent<Aura_Transference>().emotionalTransferenceRate;
-            }
-        } 
-    }
+                //col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(true);
+                //StartCoroutine (ShowAura(col.gameObject.GetComponent<Aura_Transference>()));
+                cr = StartCoroutine(ShowAura(col.gameObject.GetComponent<Aura_Transference>()));
+                //start the timer...
+                timeToNextTransference -= Time.deltaTime;
+                //check if the timer is less or equal to zero
+                if (timeToNextTransference <= 0)
+                {
 
+                    StopCoroutine(cr);
+                    //if the timer reached zero, we call the modify emotion functions, 
+                    //pass in the state of the other person, and their modifier value...
+                    //auraMaster.EventModifyEmotion(col.gameObject.GetComponent<Emotions>().emotionState);
+                    ModifyEmotion(col.gameObject.GetComponent<Emotions>().emotionState);
+                    //col.gameObject.GetComponent<Aura_Transference>().Aura.SetActive(false);
+                    //reset the transference rate back to the other objects transference rate (this covers if we stay in their aura)
+                    //if we leave the aura and enter a different the above function will be ran, and the rate will be set accordingly...
+                    timeToNextTransference = col.gameObject.GetComponent<Aura_Transference>().emotionalTransferenceRate;
+                }
+            }
+        }
+    }
+    #endregion RunTime
+
+    IEnumerator ShowAura(Aura_Transference at)
+    {
+        at.Aura.SetActive(true);
+        yield return new WaitForSeconds(1.0f);
+    }
     /// <summary>
     /// This function currently handles all our emotion changing
     /// this will likely be changed into an event that is broken up
     /// to improve its function..
     /// </summary>
-    public void ModifyEmotion(Globals.EMOTIONS emotion, float transferenceValue)
+    public void ModifyEmotion(Globals.EMOTIONS emotion)
     {
         switch (emotion)
         {
             // happiness Scale
             case Globals.EMOTIONS.HAPPY:
-                eScript.happinessScale = Transference(eScript.happinessScale, (int)transferenceValue);
+                e.happiness += e.happiness / emotionalMax * emotionalGainRate * distance;
+                e.sadness = e.sadness > emotionalMin ? -e.sadness / emotionalMax * emotionalGainRate * distance : emotionalMin;
+                e.anger = e.anger > emotionalMin ? -e.anger / emotionalMax * emotionalGainRate * distance : emotionalMin;
+                e.fear = e.fear > emotionalMin ? -e.fear / emotionalMax * emotionalGainRate * distance : emotionalMin;
+
                 break;
+
             case Globals.EMOTIONS.SAD:
-                eScript.happinessScale = Transference(eScript.happinessScale, -(int)transferenceValue);
+                e.sadness += e.sadness / emotionalMax * emotionalGainRate * distance;
+                e.happiness -= e.happiness / emotionalMax * emotionalGainRate * distance;
                 break;
             
             // anger scale
             case Globals.EMOTIONS.ANGER:
-                eScript.angerScale = Transference(eScript.angerScale, (int)transferenceValue);
+                e.anger += e.anger / emotionalMax * emotionalGainRate * distance;
+                e.happiness -= e.happiness / emotionalMax * emotionalGainRate * distance;
+                if (e.anger >= 50)
+                {
+                    e.sadness += e.sadness / emotionalMax * emotionalGainRate * distance;
+                }
                 break;
+
             case Globals.EMOTIONS.FEAR:
-                eScript.angerScale = Transference(eScript.angerScale, -(int)transferenceValue);
-                break;
+                e.fear += e.fear / emotionalMax * emotionalGainRate * distance;
+                e.happiness -= e.happiness / emotionalMax * emotionalGainRate * distance;
 
-            // energy scale
-            case Globals.EMOTIONS.ENERGIZED:
-                eScript.energyScale = Transference(eScript.energyScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTIONS.TIRED:
-                eScript.energyScale = Transference(eScript.energyScale, -(int)transferenceValue);
-                break;
-
-            // confidence scale
-            case Globals.EMOTIONS.CONFIDENT:
-                eScript.confidenceScale = Transference(eScript.confidenceScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTIONS.EMBARRASSED:
-                eScript.confidenceScale = Transference(eScript.confidenceScale, -(int)transferenceValue);
-                break;
-
-            // interest scale
-            case Globals.EMOTIONS.SURPRISED:
-                eScript.interestScale = Transference(eScript.interestScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTIONS.DISAPPOINTMENT:
-                eScript.interestScale = Transference(eScript.interestScale, -(int)transferenceValue);
-                break;
-
-            // entertainment scale
-            case Globals.EMOTIONS.BOREDOM:
-                eScript.entertainmentScale = Transference(eScript.entertainmentScale, (int)transferenceValue);
-                break;
-            case Globals.EMOTIONS.ENTERTAINED:
-                eScript.entertainmentScale = Transference(eScript.entertainmentScale, -(int)transferenceValue);
+                if (e.fear >= 50)
+                {
+                    e.anger += e.anger / emotionalMax * emotionalGainRate * distance;
+                }
                 break;
 
             default:
@@ -156,21 +162,53 @@ public class Aura_Transference : MonoBehaviour
         auraMaster.EventCheckEmotionalState();
     }
 
-    /// <summary>
-    /// This function will take in two integer values
-    /// one is the current scale were modifying
-    /// the second is the value in which were modifying
-    /// then returns the modified value.
-    /// </summary>
-    private int Transference(int scale, int value)
+
+    public void InternalTransferrence(Globals.EMOTIONS emotion)
     {
-        //Add the value, could be adding a negative, or adding a positive...
-        scale += value;
-        //check if the scale is over the max...
-        scale = (scale > emotionalScaleMax) ? emotionalScaleMax : scale;
-        //check if the scale is over the min...
-        scale = (scale < emotionalScaleMin) ? emotionalScaleMin : scale;
-        return scale;
+        switch (emotion)
+        {
+            case Globals.EMOTIONS.HAPPY:
+                if (e.happiness <= 100)
+                {
+                    e.happiness += ((e.happiness / emotionalMax) * internalTransferenceRate);
+                }
+                else
+                {
+                    e.happiness = emotionalMax;
+                }
+                break;
+            case Globals.EMOTIONS.SAD:
+                if (e.sadness <= 100)
+                {
+                    e.sadness += ((e.sadness / emotionalMax) * internalTransferenceRate);
+                }
+                else
+                {
+                    e.sadness = emotionalMax;
+                }
+                break;
+            case Globals.EMOTIONS.ANGER:
+                if (e.anger <= 100)
+                {
+                    e.anger += ((e.anger / emotionalMax) * internalTransferenceRate);
+                }
+                else
+                {
+                    e.anger = emotionalMax;
+                }
+                break;
+            case Globals.EMOTIONS.FEAR:
+                if (e.fear <= 100)
+                {
+                    e.fear += ((e.fear / emotionalMax) * internalTransferenceRate);
+                }
+                else
+                {
+                    e.fear = emotionalMax;
+                }
+                break;
+        }
+        e.CheckEmotionalState();
     }
 
 }

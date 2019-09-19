@@ -8,7 +8,7 @@ public class Aura_Master : MonoBehaviour
     /// <summary>
     /// Here is the delegate that acts as a container for all our events that we will create...
     /// </summary>
-    public delegate void AuraSystem(Globals.EMOTIONS emotion, float transferenceValue);
+    public delegate void AuraSystem(Globals.EMOTIONS emotion);
     public delegate void AuraChecks();
     // ::: EVENTS ::: //
 
@@ -17,9 +17,9 @@ public class Aura_Master : MonoBehaviour
 
     // ::: CALLS ::: //
 
-    public void EventModifyEmotion(Globals.EMOTIONS emotion, float transferenceValue)
+    public void EventModifyEmotion(Globals.EMOTIONS emotion)
     {
-        ModifyEmotion?.Invoke(emotion,transferenceValue);
+        ModifyEmotion?.Invoke(emotion);
     }
 
     public void EventCheckEmotionalState()
