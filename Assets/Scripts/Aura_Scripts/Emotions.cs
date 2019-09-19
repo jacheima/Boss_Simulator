@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Emotions : MonoBehaviour
 {
@@ -9,34 +11,23 @@ public class Emotions : MonoBehaviour
     /// We will use the following scales to add/subtract values from
     /// in order to determine what emotions state the person/object is in
     /// </summary>
-    [Header("EMOTIONAL SCALES")]
+    [Header("EMOTIONS")]
     // NEGATIVE EMOTIONS //
-    [Range(-100, 100)]
-    [Tooltip("+ = Happy, - = Sad")]
-    public int happinessScale;
-    [Range(-100, 100)]
-    [Tooltip("+ = Anger, - = Fear")]
-    public int angerScale;
-    [Range(-100, 100)]
-    [Tooltip("+ = Energized, - = Tired")]
-    public int energyScale;
-    [Range(-100, 100)]
-    [Tooltip("+ = Confident, - = Embarrassed")]
-    public int confidenceScale;
-    [Range(-100, 100)]
-    [Tooltip("+ = Surprised, - = Dissapointed")]
-    public int interestScale;
-    [Range(-100, 100)]
-    [Tooltip("+ = Entertained, - = Bored")]
-    public int entertainmentScale;
+    public float happiness = Mathf.Clamp(0.0f, 1.0f, 100.0f);
+    public float sadness = Mathf.Clamp(0.0f, 1.0f, 100.0f);
+    public float anger = Mathf.Clamp(0.0f, 1.0f, 100.0f);
+    public float fear = Mathf.Clamp(0.0f, 1.0f, 100.0f);
 
     //List of emotion scales, we will initialize this list in OnEnable...
-    private List<int> LEmotions = new List<int>();
+    private List<float> LEmotions = new List<float>();
 
     [SerializeField]
     private Aura_Master auraMaster;
     [SerializeField]
     private Color_Master colorMaster;
+    [SerializeField]
+    private Aura_GUI auraGUI = null;
+    public Color_Change colorChange;
 
     /// <summary>
     /// The current emotional state of the object/person...
@@ -62,75 +53,67 @@ public class Emotions : MonoBehaviour
     /// This function is lengthy, and will almost certainly
     /// be changed. this is to prove the concept and get things running.
     /// </summary>
-    private void CheckEmotionalState()
+    public void CheckEmotionalState()
     {
-        int v = GetDominateEmotion();
+        float v = Mathf.Round(GetDominateEmotion());
         //check if the highest value equals one of your emotions, if it does, then we check
         //to see if the scale is greater than zero, if it is, then we set the emotion respectfully...
-        if (v == happinessScale)
+        if (v == Mathf.Round(happiness))
         {
-            emotionState = happinessScale >= 0 ? Globals.EMOTIONS.HAPPY : Globals.EMOTIONS.SAD;
+            emotionState = Globals.EMOTIONS.HAPPY;
         }
-        else if (v == angerScale)
+        else if (v == Mathf.Round(anger))
         {
-            emotionState = angerScale >= 0 ? Globals.EMOTIONS.ANGER : Globals.EMOTIONS.FEAR;
-        }
-
-        else if (v == energyScale)
-        {
-            emotionState = energyScale >= 0 ? Globals.EMOTIONS.ENERGIZED : Globals.EMOTIONS.TIRED;
+            emotionState = Globals.EMOTIONS.ANGER;
         }
 
-        else if (v == interestScale)
+        else if (v == Mathf.Round(sadness))
         {
-            emotionState = interestScale >= 0 ? Globals.EMOTIONS.SURPRISED : Globals.EMOTIONS.DISAPPOINTMENT;
+            emotionState = Globals.EMOTIONS.SAD;
         }
 
-        else if (v == confidenceScale)
+        else if (v == Mathf.Round(fear))
         {
-            emotionState = confidenceScale >= 0 ? Globals.EMOTIONS.CONFIDENT : Globals.EMOTIONS.EMBARRASSED;
+            emotionState = Globals.EMOTIONS.FEAR;
         }
 
-        else if (v == entertainmentScale)
+        //change color if were allowed to..
+        if (colorChange != null)
         {
-            emotionState = entertainmentScale >= 0 ? Globals.EMOTIONS.ENTERTAINED : Globals.EMOTIONS.BOREDOM;
+            colorChange.PerformColorChange(emotionState);
         }
-        //call the color change event...
-        colorMaster.EventColorChange(emotionState);
+        //check to see if we have a gui to change
+
+        if(auraGUI != null)
+        {
+            //set the meters values
+            auraGUI.SetMeters();
+            //set the current emotion image above the player to the correct image...
+            auraGUI.SetCurrentEmotion(emotionState);
+        }
     }
 
-    private int GetDominateEmotion()
+    private float GetDominateEmotion()
     {
         //clear the list first
         LEmotions.Clear();
         //add all the emotions to the list, so we can check their values quickly...
-        LEmotions.Add(happinessScale);
-        LEmotions.Add(angerScale);
-        LEmotions.Add(energyScale);
-        LEmotions.Add(interestScale);
-        LEmotions.Add(confidenceScale);
-        LEmotions.Add(entertainmentScale);
+        LEmotions.Add(happiness);
+        LEmotions.Add(sadness);
+        LEmotions.Add(anger);
+        LEmotions.Add(fear);
 
-        //intial value for checking which emotion is the highest/lowest...
-        int highestEmotionalValue = 0;
-        int lowestEmotionalValue = 0;
-
-        //loops through the list of values, and returns the highest value...
-        foreach (int v in LEmotions)
+        float max = 0;
+        foreach (float f in LEmotions)
         {
-            highestEmotionalValue = highestEmotionalValue <= v ? v : highestEmotionalValue;
-            lowestEmotionalValue = lowestEmotionalValue >= v ? v : lowestEmotionalValue;
+            // VARIABLE = CONDITON ? TRUE : FALSE;
+            // this means, if f is greater than max
+            // ? = ternaray operator ( tells the compiler this is a conditional statement)
+            // value if true : value if false;
+            // so this says if f is greater than max, if true max = f, else max = max;
+            max = (f > max) ? f : max;
         }
-
-        //find out which value is higher (we need to get the absolute value)
-        int highestValue = Mathf.Max(Mathf.Abs(lowestEmotionalValue), Mathf.Abs(highestEmotionalValue));
-
-        //now that we have the highest value, we make it negative if it needs to be...
-        if (Mathf.Abs(lowestEmotionalValue) > Mathf.Abs(highestEmotionalValue))
-        {
-            highestValue = -highestValue;
-        }
-
-        return highestValue;
+        // return the largest value from the list...
+        return max;
     }
 }

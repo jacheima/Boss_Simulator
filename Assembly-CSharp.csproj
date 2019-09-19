@@ -229,9 +229,12 @@
      <Compile Include="Assets\Resources\Standard Assets\Vehicles\Car\Scripts\SkidTrail.cs" />
      <Compile Include="Assets\Resources\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
      <Compile Include="Assets\Resources\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
+     <Compile Include="Assets\Scripts\Aura_Scripts\Aura_GUI.cs" />
+     <Compile Include="Assets\Scripts\Aura_Scripts\Aura_Transcendence.cs" />
      <Compile Include="Assets\Scripts\Aura_Scripts\Aura_Transference.cs" />
      <Compile Include="Assets\Scripts\Aura_Scripts\Emotions.cs" />
      <Compile Include="Assets\Scripts\Function_Scripts\Color_Change.cs" />
+     <Compile Include="Assets\Scripts\Function_Scripts\Player_Movement.cs" />
      <Compile Include="Assets\Scripts\Globals\Globals.cs" />
      <Compile Include="Assets\Scripts\Master_Scripts\Aura_Master.cs" />
      <Compile Include="Assets\Scripts\Master_Scripts\Color_Master.cs" />
