@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Assertions.Comparers;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets.Characters.FirstPerson
@@ -113,6 +112,4 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
     }
-
-  
 }
