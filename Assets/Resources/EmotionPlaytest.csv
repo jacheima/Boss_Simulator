@@ -1,71 +1,71 @@
-ID,C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11
-1,Fired,why ,Reason,,,,End,,,,
-2,Promotion,given,,,,,End,,,,
-3,Motivate,given,,,,,End,,,,
-4,Talk,Q1,Q2,Q3 ,Q4,,End,,,,
-5,Sad,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-6,Angry,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-7, happy ,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-8, fear,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-9,energized,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-10,Tired,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-11,Confident,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-12, Surprised,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-13,Disappointment,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-14,Boredom,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-15,Enetertained,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-16,Embarrased,Guess 1,Guess2,Guess3,Guess4,,End,,,,
-17,Sad,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-18,Angry,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-19, happy ,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-20, fear,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-21,energized,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-22,Tired,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-23,Confident,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-24, Surprised,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-25,Disappointment,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-26,Boredom,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-27,Enetertained,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-28,Embarrased,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End,,,,
-29,,,,,,,,,,,
-30,,,,,,,,,,,
-31,,,,,,,,,,,
-32,,,,,,,,,,,
-33,,,,,,,,,,,
-34,,,,,,,,,,,
-35,,,,,,,,,,,
-36,,,,,,,,,,,
-37,,,,,,,,,,,
-38,,,,,,,,,,,
-39,,,,,,,,,,,
-40,,,,,,,,,,,
-41,,,,,,,,,,,
-42,,,,,,,,,,,
-43,,,,,,,,,,,
-44,,,,,,,,,,,
-45,,,,,,,,,,,
-46,,,,,,,,,,,
-47,,,,,,,,,,,
-48,,,,,,,,,,,
-49,,,,,,,,,,,
-50,,,,,,,,,,,
-51,,,,,,,,,,,
-52,,,,,,,,,,,
-53,,,,,,,,,,,
-54,,,,,,,,,,,
-55,,,,,,,,,,,
-56,,,,,,,,,,,
-57,,,,,,,,,,,
-58,,,,,,,,,,,
-59,,,,,,,,,,,
-60,,,,,,,,,,,
-61,,,,,,,,,,,
-62,,,,,,,,,,,
-63,,,,,,,,,,,
-64,,,,,,,,,,,
-65,,,,,,,,,,,
-66,,,,,,,,,,,
-67,,,,,,,,,,,
-68,,,,,,,,,,,
-69,,,,,,,,,,,
-70,,,,,,,,,,,
+ID,C1,C2,C3,C4,C5,C6,C7,C8,C9,C10,C11,,,
+0,"Tina ""tina is happy 100%""",start,1st,2nd gues ,3rd,4th,End,Fired,why ,Reason,,,,End
+1,Hi what can I do for you boss?,How is work?,How is home life?,How do you feel?,How are the other employes treating you ,,End,Promotion,given,,,,,End
+2,Tina Answers ,Work is great?,Home life is wonderful,I feel great,Everyone treat me great,,End,Motivate,given,,,,,End
+3,Bosses Remark,Thats what I like to hear,this is done each one because tina doesn’t have a problem in any of them,,,,End,Talk,Q1,Q2,Q3,Q4,,End
+4,Tina is sad but looks happy,How is work?,How is home life?,How do you feel?,How are the other employes treating you ,,End,Sad,Guess 5,Guess 6,Guess 7,Guess 8,,End
+5,Tinas asnswers,work is fine,home life is fine,I feel okay,They are treating me. alright,,End,Angry,Guess 5,Guess 6,Guess 7,Guess 8,,End
+6,Bosses Response,That sounds great (this response basically says the boss did not notice anything wrong),Are you sure nothing isn’t wrong? (this is a double check which may get the answer your looking for),"I see something is up, is it the work environment? (this has a possible answer of finding source mainly because she paused in this area ).","Do you need motivation, (this is a method cheer to  up and will work)",,End, happy ,Guess 5,Guess 6,Guess 7,Guess 8,,End
+7,Tinas Resonses,The first one nothing or okay than..,2nd one.. yeah I’m not sure,,,,End, fear,Guess 5,Guess 6,Guess 7,Guess 8,,End
+8,Bosses guess from 2nd anwer,your probably depressed,your probably angry,your probably sick,Your porbably tired,,End,energized,Guess 5,Guess 6,Guess 7,Guess 8,,End
+9,tina 3rd response,No not the environment directly ,,,,,End,Tired,Guess 5,Guess 6,Guess 7,Guess 8,,End
+10,Bosses response third,so you feel down,you feel sick and need rest,,,,End,Confident,Guess 5,Guess 6,Guess 7,Guess 8,,End
+11,tinas fourth response,"Yes! ""you scored it""",,,,,End, Surprised,Guess 5,Guess 6,Guess 7,Guess 8,,End
+12,Boss cure and response,Alright well here is some motivation,,,Guess4,,End,Disappointment,Guess 5,Guess 6,Guess 7,Guess 8,,End
+13,,,,,Guess4,,End,Boredom,Guess 5,Guess 6,Guess 7,Guess 8,,End
+14,,,,,Guess4,,End,Enetertained,Guess 5,Guess 6,Guess 7,Guess 8,,End
+15,,,,,Guess4,,End,Embarrased,Guess 5,Guess 6,Guess 7,Guess 8,,End
+16,,,,1/2 picture ,I know what the problem is ,,End,Sad,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+17,,,,1/2 picture ,I know what the problem is ,,End,Angry,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+18,,,,1/2 picture ,I know what the problem is ,,End, happy ,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+19,,,,1/2 picture ,I know what the problem is ,,End, fear,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+20,,,,1/2 picture ,I know what the problem is ,,End,energized,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+21,,,,1/2 picture ,I know what the problem is ,,End,Tired,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+22,,,,1/2 picture ,I know what the problem is ,,End,Confident,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+23,,,,1/2 picture ,I know what the problem is ,,End, Surprised,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+24,,,,1/2 picture ,I know what the problem is ,,End,Disappointment,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+25,,,,1/2 picture ,I know what the problem is ,,End,Boredom,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+26,,,,1/2 picture ,I know what the problem is ,,End,Enetertained,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+27,,,,1/2 picture ,I know what the problem is ,,End,Embarrased,no talk no fix,fake 1 in 4 chance,1/2 picture ,I know what the problem is ,,End
+28,,,,,,,,,,,,,,
+29,,,,,,,,,,,,,,
+30,,,,,,,,,,,,,,
+31,,,,,,,,,,,,,,
+32,,,,,,,,,,,,,,
+33,,,,,,,,,,,,,,
+34,,,,,,,,,,,,,,
+35,,,,,,,,,,,,,,
+36,,,,,,,,,,,,,,
+37,,,,,,,,,,,,,,
+38,,,,,,,,,,,,,,
+39,,,,,,,,,,,,,,
+40,,,,,,,,,,,,,,
+41,,,,,,,,,,,,,,
+42,,,,,,,,,,,,,,
+43,,,,,,,,,,,,,,
+44,,,,,,,,,,,,,,
+45,,,,,,,,,,,,,,
+46,,,,,,,,,,,,,,
+47,,,,,,,,,,,,,,
+48,,,,,,,,,,,,,,
+49,,,,,,,,,,,,,,
+50,,,,,,,,,,,,,,
+51,,,,,,,,,,,,,,
+52,,,,,,,,,,,,,,
+53,,,,,,,,,,,,,,
+54,,,,,,,,,,,,,,
+55,,,,,,,,,,,,,,
+56,,,,,,,,,,,,,,
+57,,,,,,,,,,,,,,
+58,,,,,,,,,,,,,,
+59,,,,,,,,,,,,,,
+60,,,,,,,,,,,,,,
+61,,,,,,,,,,,,,,
+62,,,,,,,,,,,,,,
+63,,,,,,,,,,,,,,
+64,,,,,,,,,,,,,,
+65,,,,,,,,,,,,,,
+66,,,,,,,,,,,,,,
+67,,,,,,,,,,,,,,
+68,,,,,,,,,,,,,,
+69,,,,,,,,,,,,,,

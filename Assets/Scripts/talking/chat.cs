@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This class is used to store the information parsed in from the csv db files
+/// </summary>
 public class chat
 {
     public int ID;
-    public string C1;
-    public string C2;
-     public string C3;
-     public string C4;
-     public string C5;
-     public string C6;
-     public string C7;
-     public string C8;
-     public string C9;
-    public string C10;
-    public string C11;
-
+    public string Conversation;
+    public string Reply1;
+     public int Replylink1;
+     public string Reply2;
+     public int Replylink2;
+     public string Reply3;
+     public int Replylink3;
+     public string Reply4;
+     public int Replylink4;
 }
