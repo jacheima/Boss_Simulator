@@ -7,32 +7,40 @@ public class AI_Needs : MonoBehaviour
 {
     public bool gottaPee;
     public NavMeshAgent agent;
-    public Transform target;
-    public Transform chair;
+
+    public float bladder, hunger, focus, social, comfort, room;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        StartCoroutine("Bladder");
+
+        bladder = 0;
     }
 
     void Update()
     {
-        if (gottaPee == true)
+        StartCoroutine("EmptyBladder");
+
+
+        if (bladder <= 10)
         {
-            agent.SetDestination(target.position);
+            gottaPee = true;
+        }
+        else
+        {
+            gottaPee = false;
         }
     }
 
-    IEnumerator Bladder()
+    IEnumerator EmptyBladder()
     {
-        yield return new WaitForSeconds(5);
-        gottaPee = true;
+        yield return new WaitForSeconds(180);
+        bladder = 0;
         Debug.Log("I gotta pee");
     }
 
     public void GoBackToWork()
     {
-        agent.SetDestination(chair.position);
+        
     }
 }

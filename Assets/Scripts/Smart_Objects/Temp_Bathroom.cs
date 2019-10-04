@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Temp_Bathroom : MonoBehaviour
 {
-    public GameObject employee;
+    public Employee employee;
 
     void Start()
     {
@@ -14,13 +14,13 @@ public class Temp_Bathroom : MonoBehaviour
 
     void Update()
     {
-       var colliders = Physics.OverlapSphere(this.gameObject.transform.position, 2);
+       var colliders = Physics.OverlapSphere(this.gameObject.transform.position, 0.5f);
        foreach (var hit in colliders)
        {
-           if (hit.gameObject == employee)
+           if (hit.gameObject.tag == "Employee" && hit.gameObject.GetComponent<Employee>().currentNeedState == AI_Controller.NeedsStates.GottaPee)
            {
-               employee.GetComponent<AI_Needs>().gottaPee = false;
-               employee.GetComponent<AI_Needs>().GoBackToWork();
+               employee = hit.gameObject.GetComponent<Employee>();
+               employee.ChangeNeedsState(AI_Controller.NeedsStates.Peeing);
            }
        }
     }
