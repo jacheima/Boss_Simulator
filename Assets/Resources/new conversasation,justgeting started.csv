@@ -1,0 +1,12 @@
+C0,C1,C2,C3,C4,C5,C6,C7,C8,C9
+ConvoID,Conversation,Reply 1,Reply 1 Link,Reply 2,Reply 2 Link,Reply 3,Reply 3 Link,Reply 4,Reply 4 Link
+0,,talk,,,,,,,
+1,Hello how are you?,I am hungry!,1,I am sick!,2,I am well!,3,I want to die!,4
+2,What do you want to eat?,,,,,,,,
+3,Should you be at work?,No,9,Yeah,9,Maybe,9,,
+4,I'm glad to hear that.,,,,,,,,
+5,I'm sorry to hear that.,Yeah me too,9,I hope I am better tomorrow,2,Wanna go get some food?,1,Lets talk later.,9
+6,,,,,,,,,
+7,,,,,,,,,
+8,,,,,,,,,
+9,END,,,,,,,,

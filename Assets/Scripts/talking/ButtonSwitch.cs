@@ -11,7 +11,7 @@ public class ButtonSwitch : MonoBehaviour
     public Text txt2;
     public Text txt3;
     public Text txt4;
-
+    public ButtonStart buttonStart;
     private int currentConvo = 0;
 
     void Start()
@@ -36,23 +36,60 @@ public class ButtonSwitch : MonoBehaviour
     public void takeResponse(int nextConvo)
     {
         // Put a comment here about what the algorithm inside does
-        switch (nextConvo)
+        if (currentConvo != 9)
         {
-            case 1:
-                currentConvo = talking.convo[currentConvo].Replylink1;
-                break;
-            case 2:
-                currentConvo = talking.convo[currentConvo].Replylink2;
-                break;
-            case 3:
-                currentConvo = talking.convo[currentConvo].Replylink3;
-                break;
-            case 4:
-                currentConvo = talking.convo[currentConvo].Replylink4;
-                break;
-            default:
-                break;
+            switch (nextConvo)
+            {
+
+                case 1:
+                    currentConvo = talking.convo[currentConvo].Replylink1;
+                    break;
+                case 2:
+                    currentConvo = talking.convo[currentConvo].Replylink2;
+                    break;
+                case 3:
+                    currentConvo = talking.convo[currentConvo].Replylink3;
+                    break;
+                case 4:
+                    currentConvo = talking.convo[currentConvo].Replylink4;
+                    break;
+                default:
+
+                    break;
+            }
+            displayText();
         }
-        displayText();
+        else
+        {
+            resetConvo();
+        }
+        disableInactiveReplies();
+    }
+
+    public void resetConvo()
+    {
+        currentConvo = 0;
+        takeResponse(currentConvo);
+        buttonStart.ConversationContainerFalse();
+    }
+
+    public void disableInactiveReplies()
+    {
+        if (talking.convo[currentConvo].Reply1 == "")
+        {
+            buttonStart.txt1.SetActive(false);
+        }
+        if (talking.convo[currentConvo].Reply2 == "")
+        {
+            buttonStart.txt2.SetActive(false);
+        }
+        if (talking.convo[currentConvo].Reply3 == "")
+        {
+            buttonStart.txt3.SetActive(false);
+        }
+        if (talking.convo[currentConvo].Reply4 == "")
+        {
+            buttonStart.txt4.SetActive(false);
+        }
     }
 }

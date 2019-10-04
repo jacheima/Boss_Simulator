@@ -11,6 +11,7 @@ using UnityEngine;
 /// </summary>
 public class databaseParser
 {
+    public  ButtonStart buttonstart;
     public List<chat> convo = new List<chat>();
 
     public void ParseDataFromDB()
@@ -37,9 +38,10 @@ public class databaseParser
                 int.TryParse(column[7], out qChat.Replylink3);
                 qChat.Reply4 = column[8];
                 int.TryParse(column[9], out qChat.Replylink4);
-
+                
                 convo.Add(qChat);
             }
         }
     }
+
 }
