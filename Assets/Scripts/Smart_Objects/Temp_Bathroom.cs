@@ -7,6 +7,11 @@ public class Temp_Bathroom : MonoBehaviour
 {
     public GameObject employee;
 
+    void Start()
+    {
+        GameManager.instance.SmartObjects.Add(gameObject);
+    }
+
     void Update()
     {
        var colliders = Physics.OverlapSphere(this.gameObject.transform.position, 2);
