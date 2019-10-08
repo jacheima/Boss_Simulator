@@ -4,16 +4,14 @@ using UnityEngine;
 
 public static class Globals : object
 {
-    // This enum holds all of our Emotions
-    public enum EMOTION
+    // Positive , Negative
+    public enum EMOTIONS
     {
-        ANNOYANCE, ANGER, RAGE,             // Anger scale //
-        APPREHENSION, FEAR, TERROR,         // Fear scale //
-        GRIEF, SADNESS, PENSIVENESS,        // Sadness Scale //
-        BOREDOM, DISGUST, LOATHING,         // Disgust Scale //
-        ACCEPTANCE, TRUST, ADMIRATION,      // Trust Scale //
-        SERENITY, JOY, ECSTASY,             // Joy Scale //
-        DISTRACTION, SURPRISE, AMAZEMENT,   // Surprise Scale //
-        INTEREST, ANTICIPATION, VIGILANCE   // Anticipation Scale //
+        HAPPY, SAD,                     // Happiness Scale //
+        ANGER, FEAR,                    // Anger Scale //
+        ENERGIZED, TIRED,               // Energy Scale //
+        CONFIDENT, EMBARRASSED,         // Confidence Scale //
+        SURPRISED, DISAPPOINTMENT,      // Interest Scale //
+        BOREDOM, ENTERTAINED            // Entertainment Scale //
     }
 }
