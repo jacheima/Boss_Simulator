@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+<<<<<<< HEAD
     /*
     These are the GameObjects that are for the Canvas of the game.
     */
@@ -27,12 +28,24 @@ public class GameManager : MonoBehaviour
     }
 
     public GameState gameState;
+=======
+    public float totalIncome = 0f;
+    public float winCondition = 10000f;
+    public float incomeValue = 100f;
+
+    public List<GameObject> employeeDesks;
+
+    public GameObject employee;
+
+    public static GameManager instance;
+>>>>>>> MoneyFeature
 
     public void Awake()
     {
         if (instance == null)
         {
             instance = this;
+<<<<<<< HEAD
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -89,5 +102,44 @@ public class GameManager : MonoBehaviour
     {
         gameState = (GameState)state;
         ActivateScreens();
+=======
+        }
+
+        if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    void Start()
+    {
+        employeeDesks.Add(GameObject.Find("Desk"));
+    }
+    void Update()
+    {
+        if (employeeDesks != null)
+        {
+
+        }
+
+        //check to see if we've met our win condition
+        if (totalIncome < winCondition && employee.GetComponent<AI_Controller>().isAtDesk)
+        {
+            GenerateIncome();
+        }
+        else
+        {
+            Debug.Log("You Have Maximized your profit margin, Congratulations!");
+        }
+    }
+    public void GenerateIncome()
+    {
+      
+            totalIncome += incomeValue * Time.deltaTime;
+            Debug.Log("Current Profit: " + totalIncome);
+
+>>>>>>> MoneyFeature
     }
 }
