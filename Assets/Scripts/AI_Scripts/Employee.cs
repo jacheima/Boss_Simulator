@@ -11,7 +11,9 @@ public class Employee : AI_Controller
     public float currentIncome;
     public float baselineIncome;
 
-    void Start()
+    //when were using an event system always use OnEnable
+    //rather than Start
+    void OnEnable()
     {
         needs = gameObject.GetComponent<AI_Needs>();
         agent = gameObject.GetComponent<NavMeshAgent>();
@@ -38,6 +40,7 @@ public class Employee : AI_Controller
         {
             case EmployeeStates.Work:
                 Work();
+                Debug.Log(Time.time);
                 if (Time.time >= employeeStateStartTime + 20f)
                 {
                     ChangeEmployeeState(EmployeeStates.Idle);

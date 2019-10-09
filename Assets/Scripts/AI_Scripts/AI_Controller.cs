@@ -27,6 +27,7 @@ public class AI_Controller : MonoBehaviour
     public void ChangeEmployeeState(EmployeeStates newEmployeeState)
     {
         employeeStateStartTime = Time.time;
+        Debug.Log("State Start Time = " + employeeStateStartTime);
         currentEmployeeState = newEmployeeState;
     }
 
