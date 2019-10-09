@@ -1,83 +1,62 @@
-<<<<<<< HEAD
 ﻿using System;
 using System.Collections;
-=======
-﻿using System.Collections;
->>>>>>> MoneyFeature
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-<<<<<<< HEAD
     public static GameManager instance;
 
     [Header("Smart Objects")]
     public List<GameObject> SmartObjects;
 
-    private void Awake()
-=======
-    public float totalIncome = 0f;
+    [Header("Employees")]
+    public List<Employee> Employees = new List<Employee>();
+
+    [Header("Budget Variables")]
+    public float totalIncome = 100f;
     public float winCondition = 10000f;
-    public float incomeValue = 100f;
-
-    public List<GameObject> employeeDesks;
-
-    public GameObject employee;
-
-    public static GameManager instance;
+    public float incomeValue = 0f;
 
     public void Awake()
->>>>>>> MoneyFeature
     {
         if (instance == null)
         {
             instance = this;
-<<<<<<< HEAD
+
             DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
-=======
-        }
-
-        if (instance != this)
-        {
-            Destroy(gameObject);
-        }
-
-        DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
     {
-        employeeDesks.Add(GameObject.Find("Desk"));
+        InvokeRepeating("GenerateIncome", 0f, 1f);
     }
+
     void Update()
     {
-        if (employeeDesks != null)
+        foreach (var employee in Employees)
         {
-
+            incomeValue =+ employee.currentIncome;
         }
 
         //check to see if we've met our win condition
-        if (totalIncome < winCondition && employee.GetComponent<AI_Controller>().isAtDesk)
+       /* if (totalIncome < winCondition && employee.GetComponent<Employee>().isWorking)
         {
             GenerateIncome();
         }
         else
         {
             Debug.Log("You Have Maximized your profit margin, Congratulations!");
-        }
+        } */
     }
     public void GenerateIncome()
     {
-      
-            totalIncome += incomeValue * Time.deltaTime;
-            Debug.Log("Current Profit: " + totalIncome);
-
->>>>>>> MoneyFeature
-    }
+            totalIncome += incomeValue;
+            Debug.Log("Current Money: " + totalIncome);
+        }
 }

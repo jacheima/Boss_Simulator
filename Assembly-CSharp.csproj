@@ -141,7 +141,11 @@
     <Compile Include="Assets\FImpossible Games\FBasic Assets\Scripts\FBasic_Enums.cs" />
     <Compile Include="Assets\FImpossible Games\FBasic Assets\Scripts\FBasic_NotRepetiveSelector.cs" />
     <Compile Include="Assets\FImpossible Games\FBasic Assets\Scripts\FBasics_PathData.cs" />
+    <Compile Include="Assets\Interactable.cs" />
+    <Compile Include="Assets\MenuControls.cs" />
     <Compile Include="Assets\Pawn_Data.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Resources\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -150,8 +154,9 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
-    <Compile Include="Assets\Scripts\AI\AI_Controller.cs" />
-    <Compile Include="Assets\Scripts\AI\Carol_Controller.cs" />
+    <Compile Include="Assets\Scripts\AI_Scripts\AI_Controller.cs" />
+    <Compile Include="Assets\Scripts\AI_Scripts\AI_Needs.cs" />
+    <Compile Include="Assets\Scripts\AI_Scripts\Employee.cs" />
     <Compile Include="Assets\Scripts\Aura_Scripts\Aura_Transference.cs" />
     <Compile Include="Assets\Scripts\Aura_Scripts\Emotion_Base.cs" />
     <Compile Include="Assets\Scripts\Aura_Scripts\Emotions.cs" />
@@ -163,6 +168,9 @@
     <Compile Include="Assets\Scripts\Master_Scripts\Color_Master.cs" />
     <Compile Include="Assets\Scripts\Money_Scripts\Money.cs" />
     <Compile Include="Assets\Scripts\Money_Scripts\Money_Master.cs" />
+    <Compile Include="Assets\Scripts\Smart_Objects\Desk.cs" />
+    <Compile Include="Assets\Scripts\Smart_Objects\Temp_Bathroom.cs" />
+    <Compile Include="Assets\Scripts\Target.cs" />
     <None Include="Assets\FImpossible Games\FBasic Assets\Others\mrsmonster.txt" />
     <None Include="Assets\FImpossible Games\FBasic Assets\Shaders\FParticle VertexLit Blended.shader" />
     <None Include="Assets\FImpossible Games\FBasic Assets\Others\S_3DText Shader.shader" />
@@ -171,31 +179,31 @@
     <None Include="Assets\FImpossible Games\FBasic Assets\Shaders\FPhantomRefractive.shader" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/JASJOHN3/Desktop/Boss_Simulator/Boss_Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/WILMCCLA/Desktop/Boss_Simulator/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/JASJOHN3/Desktop/Boss_Simulator/Boss_Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/WILMCCLA/Desktop/Boss_Simulator/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/JASJOHN3/Desktop/Boss_Simulator/Boss_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/WILMCCLA/Desktop/Boss_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/JASJOHN3/Desktop/Boss_Simulator/Boss_Simulator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/WILMCCLA/Desktop/Boss_Simulator/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/JASJOHN3/Desktop/Boss_Simulator/Boss_Simulator/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/WILMCCLA/Desktop/Boss_Simulator/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/JASJOHN3/Desktop/Boss_Simulator/Boss_Simulator/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/WILMCCLA/Desktop/Boss_Simulator/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/JASJOHN3/Desktop/Boss_Simulator/Boss_Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/WILMCCLA/Desktop/Boss_Simulator/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/JASJOHN3/Desktop/Boss_Simulator/Boss_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/WILMCCLA/Desktop/Boss_Simulator/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/JASJOHN3/Desktop/Boss_Simulator/Boss_Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/WILMCCLA/Desktop/Boss_Simulator/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity 2019.2.2f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

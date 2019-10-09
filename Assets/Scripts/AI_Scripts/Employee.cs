@@ -1,11 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Employee : AI_Controller
 {
+
+    public bool isAtDesk;
+    public bool isWorking;
+    public float currentIncome;
+    public float baselineIncome;
+
+    void Start()
+    {
+        needs = gameObject.GetComponent<AI_Needs>();
+        agent = gameObject.GetComponent<NavMeshAgent>();
+        GameManager.instance.Employees.Add(this);
+    }
+
     void Update()
     {
+        if (currentEmployeeState == EmployeeStates.Work)
+        {
+            isWorking = true;
+        }
+        else
+        {
+            isWorking = false;
+        }
+
+        if (isWorking == true && isAtDesk == true)
+        {
+            currentIncome = baselineIncome;
+        }
+
         switch (currentEmployeeState)
         {
             case EmployeeStates.Work:

@@ -5,8 +5,10 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class AI_Controller : MonoBehaviour
-{
+{ 
+    //[HideInInspector]
     public AI_Needs needs;
+    //[HideInInspector]
     public NavMeshAgent agent;
 
     public NeedsStates currentNeedState;
@@ -14,12 +16,6 @@ public class AI_Controller : MonoBehaviour
     public float needStateStartTime;
     public float employeeStateStartTime;
     public Transform workstation;
-
-    void Start()
-    {
-        needs = gameObject.GetComponent<AI_Needs>();
-        agent = gameObject.GetComponent<NavMeshAgent>();
-    }
 
     //----------Employee States----------\\
 
