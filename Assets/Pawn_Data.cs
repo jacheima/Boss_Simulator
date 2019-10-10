@@ -5,17 +5,10 @@ using UnityEngine;
 public class Pawn_Data : MonoBehaviour
 {
     public float pee = 25;
-
     public float social = 10;
-
     public float eat;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
     void Update()
     {
         pee += 1 * Time.deltaTime;

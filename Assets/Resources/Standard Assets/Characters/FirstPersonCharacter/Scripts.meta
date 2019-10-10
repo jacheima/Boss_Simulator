@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 70b449d7b33c21d44879119c4c4c31d3
 folderAsset: yes
 DefaultImporter:
@@ -6,3 +7,10 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+=======
+guid: 314f49b24dc9d5d40956a7b28c67b237
+folderAsset: yes
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+>>>>>>> AINeeds

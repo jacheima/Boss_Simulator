@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 namespace UnityStandardAssets.Characters.FirstPerson
 {
+<<<<<<< HEAD
     [RequireComponent(typeof(CharacterController))]
     [RequireComponent(typeof(AudioSource))]
     public class FirstPersonController : MonoBehaviour
@@ -13,6 +14,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private bool m_IsWalking;
         [SerializeField] public float m_WalkSpeed;
         [SerializeField] public float m_RunSpeed;
+=======
+    [RequireComponent(typeof (CharacterController))]
+    [RequireComponent(typeof (AudioSource))]
+    public class FirstPersonController : MonoBehaviour
+    {
+        [SerializeField] private bool m_IsWalking;
+        [SerializeField] private float m_WalkSpeed;
+        [SerializeField] private float m_RunSpeed;
+>>>>>>> AINeeds
         [SerializeField] [Range(0f, 1f)] private float m_RunstepLenghten;
         [SerializeField] private float m_JumpSpeed;
         [SerializeField] private float m_StickToGroundForce;
@@ -42,11 +52,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+<<<<<<< HEAD
         
         
        
 
 
+=======
+>>>>>>> AINeeds
         // Use this for initialization
         private void Start()
         {
@@ -86,8 +99,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
+<<<<<<< HEAD
 
             
+=======
+>>>>>>> AINeeds
         }
 
 
