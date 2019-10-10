@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
     /*
     These are the GameObjects that are for the Canvas of the game.
     */
@@ -30,13 +28,6 @@ public class GameManager : MonoBehaviour
     }
 
     public GameState gameState;
-=======
-    public float totalIncome = 0f;
-    public float winCondition = 10000f;
-    public float incomeValue = 100f;
-=======
-    public static GameManager instance;
->>>>>>> AINeeds
 
     [Header("Smart Objects")]
     public List<GameObject> SmartObjects;
@@ -44,36 +35,23 @@ public class GameManager : MonoBehaviour
     [Header("Employees")]
     public List<Employee> Employees = new List<Employee>();
 
-<<<<<<< HEAD
-    public static GameManager instance;
->>>>>>> MoneyFeature
-=======
+
     [Header("Budget Variables")]
     public float totalIncome = 100f;
     public float winCondition = 10000f;
     public float incomeValue = 0f;
->>>>>>> AINeeds
+
 
     public void Awake()
     {
         if (instance == null)
         {
             instance = this;
-<<<<<<< HEAD
-<<<<<<< HEAD
             DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(this);
-        }
-    }
-
-    void Update()
-    {
-        if(Input.GetKey(KeyCode.P))
-        {
-            MenuCanvas.SetActive(true);
         }
     }
 
@@ -117,17 +95,6 @@ public class GameManager : MonoBehaviour
     {
         gameState = (GameState)state;
         ActivateScreens();
-=======
-        }
-=======
->>>>>>> AINeeds
-
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
 
     void Start()
@@ -159,16 +126,7 @@ public class GameManager : MonoBehaviour
     }
     public void GenerateIncome()
     {
-<<<<<<< HEAD
-      
-            totalIncome += incomeValue * Time.deltaTime;
-            Debug.Log("Current Profit: " + totalIncome);
-
->>>>>>> MoneyFeature
+        totalIncome += incomeValue * Time.deltaTime;
+        Debug.Log("Current Profit: " + totalIncome);
     }
-=======
-            totalIncome += incomeValue;
-            Debug.Log("Current Money: " + totalIncome);
-        }
->>>>>>> AINeeds
 }
