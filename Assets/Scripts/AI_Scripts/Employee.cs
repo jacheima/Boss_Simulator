@@ -10,6 +10,7 @@ public class Employee : AI_Controller
     public bool isWorking;
     public float currentIncome;
     public float baselineIncome;
+    
 
     //when were using an event system always use OnEnable
     //rather than Start
@@ -18,6 +19,7 @@ public class Employee : AI_Controller
         needs = gameObject.GetComponent<AI_Needs>();
         agent = gameObject.GetComponent<NavMeshAgent>();
         GameManager.instance.Employees.Add(this);
+        renderer = gameObject.GetComponent<MeshRenderer>();
     }
 
     void Update()
@@ -35,12 +37,15 @@ public class Employee : AI_Controller
         {
             currentIncome = baselineIncome;
         }
+        else
+        {
+            currentIncome = 0;
+        }
 
         switch (currentEmployeeState)
         {
             case EmployeeStates.Work:
                 Work();
-                Debug.Log(Time.time);
                 if (Time.time >= employeeStateStartTime + 20f)
                 {
                     ChangeEmployeeState(EmployeeStates.Idle);
@@ -51,7 +56,16 @@ public class Employee : AI_Controller
                 }
                 break;
             
+            case EmployeeStates.Idle:
+                Idle();
+                if (currentNeedState != NeedsStates.Fine)
+                {
+                    ChangeEmployeeState(EmployeeStates.FulfillNeed);
+                }
+                break;
+            
             case EmployeeStates.FulfillNeed:
+                FulfillNeed();
                 if (currentNeedState == NeedsStates.Fine)
                 {
                     ChangeEmployeeState(EmployeeStates.Work);

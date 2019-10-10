@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.P))
+        {
+            Debug.Log("Cursor Lock State is " + Cursor.lockState);
+        }
+
         foreach (var employee in Employees)
         {
             incomeValue =+ employee.currentIncome;

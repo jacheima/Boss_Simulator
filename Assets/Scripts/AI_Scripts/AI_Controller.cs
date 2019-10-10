@@ -11,11 +11,18 @@ public class AI_Controller : MonoBehaviour
     //[HideInInspector]
     public NavMeshAgent agent;
 
+    public Renderer renderer;
+    public Material idleMat;
+    public Material workMat;
+    public Material needMat;
+
     public NeedsStates currentNeedState;
     public EmployeeStates currentEmployeeState;
     public float needStateStartTime;
     public float employeeStateStartTime;
     public Transform workstation;
+
+
 
     //----------Employee States----------\\
 
@@ -33,11 +40,22 @@ public class AI_Controller : MonoBehaviour
 
     public void Work()
     {
+        renderer.material = workMat;
         agent.SetDestination(workstation.position);
         if (agent.remainingDistance <= .2f)
         {
             this.transform.rotation = workstation.rotation;
         }
+    }
+
+    public void Idle()
+    {
+        renderer.material = idleMat;
+    }
+
+    public void FulfillNeed()
+    {
+        renderer.material = needMat;
     }
 
     //----------Needs States----------\\

@@ -17,6 +17,10 @@ public class Desk : MonoBehaviour
             {
                 employee.GetComponent<Employee>().isAtDesk = true;
             }
+            else if (employee != null)
+            {
+                employee.GetComponent<Employee>().isAtDesk = false;
+            }
         }
     }
 }

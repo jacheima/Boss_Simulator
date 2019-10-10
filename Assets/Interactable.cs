@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Interactable : MonoBehaviour
@@ -41,7 +42,7 @@ public class Interactable : MonoBehaviour
                         {
                             Debug.Log("I see the Desk");
 
-                            if (Input.GetMouseButtonDown(0))
+                            if (Input.GetMouseButtonUp(0))
                             {
                                hireButton.SetActive(true);
                                FPC.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.m_cursorIsLocked = false;
@@ -66,11 +67,32 @@ public class Interactable : MonoBehaviour
                             {
                                 workButton.SetActive(true);
                                 FPC.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.m_cursorIsLocked = false;
+
+                                if (Input.GetMouseButtonUp(0) && !EventSystem.current.IsPointerOverGameObject())
+                                {
+                                    workButton.SetActive(false);
+                                    FPC.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.m_cursorIsLocked = true;
+                                }
                             }
                         }
                     }
                 }
             }
+        }
+    }
+
+    public void ClickNotOnAButton()
+    {
+        if (hireButton.activeSelf)
+        {
+            hireButton.SetActive(false);
+            FPC.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.m_cursorIsLocked = true;
+        }
+
+        if (workButton.activeSelf)
+        {
+            workButton.SetActive(false);
+            FPC.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook.m_cursorIsLocked = true;
         }
     }
 }

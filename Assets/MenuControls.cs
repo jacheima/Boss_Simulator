@@ -11,6 +11,7 @@ public class MenuControls : MonoBehaviour
     public Transform chair;
     public GameObject clone;
     public Interactable interactable;
+    public GameObject desk;
 
     private Vector3 pos;
     private Quaternion rotation;
@@ -23,6 +24,7 @@ public class MenuControls : MonoBehaviour
 #pragma warning restore CS0436 // Type conflicts with imported type
         clone = Instantiate(bob, chair.position, chair.rotation);
         clone.GetComponent<Employee>().workstation = chair;
+        desk.GetComponent<Desk>().employee = clone;
         Debug.Log("Instantiating Bob");
     }
 
