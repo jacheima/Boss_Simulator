@@ -11,10 +11,30 @@ public class MenuControls : MonoBehaviour
     public Transform chair;
     public GameObject clone;
     public Interactable interactable;
-    public GameObject desk;
+    public GameObject workstation;
+    public Animator helpUI;
+
+    private bool helpUIActive;
 
     private Vector3 pos;
     private Quaternion rotation;
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Tab))
+        {
+            if (helpUIActive == true)
+            {
+                helpUIActive = false;
+                helpUI.SetTrigger("GoOut");
+            }
+            else
+            {
+                helpUIActive = true;
+                helpUI.SetTrigger("GoIn");
+            }
+        }
+    }
 
     public void HireButton()
     {
@@ -24,7 +44,7 @@ public class MenuControls : MonoBehaviour
 #pragma warning restore CS0436 // Type conflicts with imported type
         clone = Instantiate(bob, chair.position, chair.rotation);
         clone.GetComponent<Employee>().workstation = chair;
-        desk.GetComponent<Desk>().employee = clone;
+        workstation.GetComponent<Workstation>().employee = clone;
         Debug.Log("Instantiating Bob");
     }
 
